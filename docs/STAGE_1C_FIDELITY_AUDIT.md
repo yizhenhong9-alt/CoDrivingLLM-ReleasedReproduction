@@ -41,3 +41,13 @@ The original workbook, writer, and agent objects have different lifetimes: workb
 - The paper-level meaning of the 100-episode outer loop was not established in this audit.
 - `max_steps=100` is a runner protection default, not the Released duration. The Released default duration bound is `50 × 5 - 1 = 249` policy steps for Intersection.
 - Explicit `testing_seeds` is an engineering reproducibility interface. This audit does not claim it reproduces every RNG side effect of the default multi-episode seed progression.
+
+## Stage 1C-R1 reliability classification
+
+Stage 1C-R1 changes only runner observability and failure preservation:
+
+- Git commit and branch remain ordinary strings when queries succeed. A failed query is recorded as `unavailable` with its exception type, reason, and traceback; no identity is invented.
+- NumPy scalars and arrays remain converted to JSON-native values. An unsupported value is no longer silently coerced with `str()`; it is represented by an explicit `unsupported_type` record containing its qualified Python type, `repr`, and any `repr` failure.
+- Environment cleanup has no transition or decision effect. A cleanup exception is written separately to `cleanup_error.json`. When a primary runtime error already exists, that primary error remains the propagated exception; when cleanup is the only failure, it becomes a recorded and propagated runtime error.
+
+These are execution-record and error-handling adaptations. They do not modify Released Prompt, Parser, Negotiation, Safety, Action Mapping, simulator, Memory algorithm, or LLM backend behavior.

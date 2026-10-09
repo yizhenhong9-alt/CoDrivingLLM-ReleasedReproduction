@@ -102,3 +102,12 @@ Before any status becomes `IMPLEMENTED`, record:
 - Guard semantics: default `max_steps=100` is an execution protection limit, not a Released or paper setting. The Released Intersection default duration boundary is 249 policy steps.
 - Metrics: collision and arrival use explicit simulator attributes/methods; independent success, LLM call count, and parser failure count are marked unavailable because the Released interfaces do not expose reliable definitions/counters.
 - Validation: Local fake regression covers call ordering, one transition per cycle, action identity, Memory OFF, termination, max-step stop, error propagation, NumPy JSON, exclusive result directories, and protected-source identity. Real Ollama/simulator execution is deferred to RDP.
+
+### P09 - Full-episode record and cleanup reliability
+
+- Modified file: `scripts/minimal_ollama_full_episode.py`; no controller or simulator source changed.
+- Initialization: Git commit/branch queries now occur inside the protected execution path. Each failed query is explicitly recorded as unavailable with its reason and traceback; successful metadata remains unchanged.
+- Serialization: Python primitives and NumPy scalar/array values retain JSON-native representations. Unknown values now produce a typed `unsupported_type` diagnostic record instead of an unlabelled string conversion. Joint action conversion remains reporting-only after `env.step()`.
+- Cleanup: `env.close()` exceptions are captured in `cleanup_error.json`. A pre-existing runtime exception remains primary and is re-raised; a cleanup-only failure is recorded as `runtime_error` and re-raised. No simulator transition is added.
+- Decision-semantic impact: none. This patch changes metadata, serialization diagnostics, and cleanup failure precedence only. It adds no retry, fallback, action replacement, prompt rewrite, or LLM behavior.
+- Validation: fake tests cover normal/unavailable Git metadata, NumPy and unknown-value serialization, cleanup-only failure, simultaneous primary/cleanup failure, traceback preservation, completed-step durability, action identity/order, one step per cycle, Memory OFF, and protected-source identity.

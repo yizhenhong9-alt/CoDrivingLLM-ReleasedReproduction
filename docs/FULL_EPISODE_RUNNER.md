@@ -59,5 +59,36 @@ Every invocation creates a new timestamp/UUID subdirectory. It never reuses an e
 - `steps.jsonl`: one durable record after each successful environment transition.
 - `episode_summary.json`: environment termination, guard stop, or runtime error summary.
 - `error.json`: original exception type, message, and traceback when a failure occurs.
+- `cleanup_error.json`: environment-close exception and traceback, only when cleanup fails.
 
 On `runtime_error`, preserve the run directory and terminal output. Do not rerun automatically. On `max_steps_reached`, do not classify the run as an environment-completed episode.
+
+Git metadata query failures do not receive fabricated values. The affected field is
+stored as an `unavailable` record with its reason and traceback, while the run may
+continue. Unsupported JSON values are stored as typed diagnostic records rather
+than silently converted to plain strings.
+
+If both the policy/runtime path and `env.close()` fail, `error.json` retains the
+primary failure and `cleanup_error.json` retains the cleanup failure. The primary
+exception is re-raised. If cleanup is the only failure, it is recorded as
+`runtime_error` and re-raised.
+
+## Three-step reliability smoke test
+
+After the preflight and before a longer bounded episode, use exactly three policy
+cycles as the initial RDP reliability gate:
+
+```powershell
+& $Python -m scripts.minimal_ollama_full_episode `
+    --backend ollama `
+    --model 'qwen2.5:7b' `
+    --endpoint 'http://127.0.0.1:11435' `
+    --timeout 120 `
+    --seed 0 `
+    --max-steps 3 `
+    --output-dir $Output
+```
+
+Expected nonterminal result: `completion_status=max_steps_reached`, three JSONL
+step records, and `environment_cleanup.status=closed`. An earlier
+`environment_terminated` is also valid if returned by the original simulator.

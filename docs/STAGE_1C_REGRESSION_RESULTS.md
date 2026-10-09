@@ -29,3 +29,9 @@ python -m unittest discover -s tests -p 'test_*.py' -v
 ```
 
 Result after the final implementation: 15 tests passed. RDP simulator/Ollama validation remains separate.
+
+## Stage 1C-R1 additions
+
+The reliability suite adds normal and failed Git metadata queries, typed unknown-value serialization, cleanup traceback capture, cleanup-only failure, and simultaneous runtime/cleanup failure with completed JSONL records preserved.
+
+Final Stage 1C-R1 result using the same discovery command: **19 tests passed**.

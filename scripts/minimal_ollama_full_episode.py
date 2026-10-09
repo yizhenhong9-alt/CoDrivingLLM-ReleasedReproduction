@@ -26,7 +26,23 @@ def json_safe(value):
         return json_safe(value.tolist())
     if hasattr(value, "item"):
         return json_safe(value.item())
-    return str(value)
+    value_type = type(value)
+    try:
+        representation = repr(value)
+        representation_error = None
+    except Exception as error:
+        representation = None
+        representation_error = {
+            "error_type": type(error).__name__,
+            "error_message": str(error),
+        }
+    return {
+        "__json_serialization__": "unsupported_type",
+        "python_type": "{}.{}".format(
+            value_type.__module__, value_type.__qualname__),
+        "repr": representation,
+        "repr_error": representation_error,
+    }
 
 
 def write_json(path, value):
@@ -57,6 +73,26 @@ def git_value(repository, *arguments):
     return subprocess.check_output(
         ["git", *arguments], cwd=str(repository), text=True,
         encoding="utf-8").strip()
+
+
+def collect_git_metadata(repository):
+    values = {}
+    commands = {
+        "git_commit": ("rev-parse", "HEAD"),
+        "branch": ("branch", "--show-current"),
+    }
+    for field, arguments in commands.items():
+        try:
+            values[field] = git_value(repository, *arguments)
+        except Exception as error:
+            values[field] = {
+                "value": None,
+                "status": "unavailable",
+                "reason": str(error),
+                "error_type": type(error).__name__,
+                "traceback": traceback.format_exc(),
+            }
+    return values
 
 
 def package_version(name):
@@ -125,6 +161,25 @@ def runtime_error_summary(error, completed_records, wall_clock_seconds,
             "reason": "Released parsers expose no failure counter.",
         },
     }
+
+
+def capture_environment_cleanup(env):
+    if env is None:
+        return None
+    try:
+        env.close()
+        return None
+    except Exception as error:
+        return {
+            "error": error,
+            "traceback_object": error.__traceback__,
+            "record": {
+                "status": "cleanup_error",
+                "error_type": type(error).__name__,
+                "error_message": str(error),
+                "traceback": traceback.format_exc(),
+            },
+        }
 
 
 def run_episode(env, negotiation_agent_factory, action_agent_factory,
@@ -215,14 +270,13 @@ def main(argv=None):
     steps_path = run_directory / "steps.jsonl"
     summary_path = run_directory / "episode_summary.json"
     error_path = run_directory / "error.json"
+    cleanup_error_path = run_directory / "cleanup_error.json"
     started_wall = utc_now()
     started = time.perf_counter()
     env = None
     completed_records = []
 
     run_metadata = {
-        "git_commit": git_value(repository, "rev-parse", "HEAD"),
-        "branch": git_value(repository, "branch", "--show-current"),
         "scenario": "intersection-multi-agent-v0",
         "seed": args.seed,
         "memory_mode": "off",
@@ -242,9 +296,11 @@ def main(argv=None):
         },
         "execution_status": "running",
     }
-    write_json(metadata_path, run_metadata)
 
     try:
+        run_metadata.update(collect_git_metadata(repository))
+        write_json(metadata_path, run_metadata)
+
         # Runtime-only imports keep Local fake tests independent of simulator and
         # never import llm_controller.memory.
         import gym
@@ -308,10 +364,33 @@ def main(argv=None):
         run_metadata["execution_status"] = "runtime_error"
         raise
     finally:
+        primary_error = sys.exc_info()[1]
+        cleanup_failure = capture_environment_cleanup(env)
+        if cleanup_failure is None:
+            run_metadata["environment_cleanup"] = {
+                "status": "closed" if env is not None else "not_created",
+            }
+        else:
+            cleanup_record = cleanup_failure["record"]
+            write_json(cleanup_error_path, cleanup_record)
+            run_metadata["environment_cleanup"] = cleanup_record
+            if primary_error is None:
+                error_record = runtime_error_summary(
+                    cleanup_failure["error"],
+                    completed_records,
+                    time.perf_counter() - started,
+                    cleanup_record["traceback"],
+                )
+                error_record["failure_stage"] = "environment_cleanup"
+                write_json(error_path, error_record)
+                write_json(summary_path, error_record)
+                run_metadata["execution_status"] = "runtime_error"
+
         run_metadata["end_time_utc"] = utc_now()
         write_json(metadata_path, run_metadata)
-        if env is not None:
-            env.close()
+        if cleanup_failure is not None and primary_error is None:
+            raise cleanup_failure["error"].with_traceback(
+                cleanup_failure["traceback_object"])
 
 
 if __name__ == "__main__":
