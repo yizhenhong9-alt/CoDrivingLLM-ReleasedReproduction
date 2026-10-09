@@ -16,7 +16,7 @@ Stage 1A created this register without source changes. Stage 1B updates each ent
 | P03 | Ollama backend | `REQUIRED_OLLAMA_SUBSTITUTION` | `IMPLEMENTED_LOCAL_VERIFIED` | Added a native `/api/chat` transport with explicit backend, model, endpoint, and timeout. Action and negotiation pass their original single-system-message payload to it. Fake HTTP, prompt-AST equality, parser identity, and action-mapping identity tests passed. Real RDP Ollama remains untested. |
 | P04 | Mandatory proxy removal | `REQUIRED_OLLAMA_SUBSTITUTION` | `IMPLEMENTED_LOCAL_VERIFIED` | Removed the per-call OpenAI/httpx proxy construction from both controller modules. The minimal backend contains no proxy or OpenAI branch. Static exclusion tests passed. |
 | P05 | API credential handling | `REQUIRED_RUNTIME_COMPATIBILITY` | `IMPLEMENTED_LOCAL_VERIFIED` | Removed the unused source API-key placeholders and OpenAI imports from the two chat controller modules. Ollama requires no API credential. Static exclusion and secret-pattern checks passed. |
-| P06 | Memory OFF import side effects | `REQUIRED_RUNTIME_COMPATIBILITY` candidate | `NOT_IMPLEMENTED` | Ensure Memory OFF performs no embedding initialization, credential mutation, database creation, retrieval, or update. |
+| P06 | Memory OFF import side effects | `REQUIRED_RUNTIME_COMPATIBILITY` | `IMPLEMENTED_LOCAL_VERIFIED` | Added a one-policy-step Memory-OFF runner that does not import or instantiate `DrivingMemory` and passes `memory=None` through the released disabled-memory decision path. A fake ordering test proved negotiation -> decisions -> one joint `env.step`, no `db/`, and no `llm_controller.memory` import. Real simulator validation remains an RDP gate. |
 
 ## Patch record requirements
 
@@ -71,3 +71,12 @@ Before any status becomes `IMPLEMENTED`, record:
 - Change: removed OpenAI imports, placeholders, and API-key parameters from the chat path.
 - Decision-semantic impact: none; Ollama authentication is not introduced.
 - Local result: static exclusion and committed-diff secret scans passed.
+
+### P06 - Memory OFF infrastructure isolation
+
+- New file: `scripts/minimal_ollama_single_step.py`.
+- Change: the bounded runner performs exactly one policy cycle and never imports or instantiates `DrivingMemory`; it passes `memory=None` to the released decision method, whose retrieval and update calls remain disabled.
+- Ordering: centralized negotiation, all per-CAV decisions, joint action flattening, exactly one `env.step(tuple(action), env)`.
+- Decision-semantic impact: no Memory retrieval/update behavior was modified or enabled. The original `Run_multi_CAV_LLM.py` remains unchanged; the new runner removes unused embedding/Chroma side effects only for the explicit Memory-OFF smoke path.
+- Local result: fake ordering and no-database test passed; `llm_controller.memory` was absent from `sys.modules`. No simulator or real LLM was executed.
+- RDP gate: `docs/RDP_SMOKE_TEST.md` defines environment, Ollama inventory, and one-step commands. A full episode remains unauthorized.

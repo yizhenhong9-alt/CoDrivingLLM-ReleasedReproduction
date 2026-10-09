@@ -1,6 +1,9 @@
 import ast
+import importlib.util
 import json
 import subprocess
+import sys
+import tempfile
 import unittest
 from pathlib import Path
 from unittest import mock
@@ -142,6 +145,59 @@ class ReleasedSemanticsTests(unittest.TestCase):
         self.assertNotIn("api_key", combined)
         self.assertNotIn("retry", combined.lower())
         self.assertNotIn("fallback", combined.lower())
+
+
+class MemoryOffOrderingTests(unittest.TestCase):
+    def test_memory_off_single_step_order_and_no_database(self):
+        script_path = ROOT / "scripts" / "minimal_ollama_single_step.py"
+        spec = importlib.util.spec_from_file_location(
+            "minimal_ollama_single_step", script_path)
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+
+        events = []
+
+        class FakeEnv:
+            controlled_vehicles = ["cav-0", "cav-1"]
+
+            def step(self, action, passed_env):
+                events.append(("env.step", action, passed_env is self))
+                return "observation", 1.25, False, {"ok": True}
+
+        class FakeNegotiationAgent:
+            def llm_controller_run(self, env):
+                events.append(("negotiation", env))
+                return "released negotiation response", ["conflict"]
+
+        class FakeActionAgent:
+            def llm_controller_run(self, env, negotiation_prompt,
+                                   conflicting_info, controlled_vehicles,
+                                   memory):
+                events.append((
+                    "decisions", env, negotiation_prompt, conflicting_info,
+                    controlled_vehicles, memory))
+                return [[1], [3]]
+
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            old_cwd = Path.cwd()
+            try:
+                # If the runner accidentally initializes released Memory, its
+                # default relative database would appear below this directory.
+                import os
+                os.chdir(temporary_directory)
+                result = module.run_policy_step(
+                    FakeEnv(), FakeNegotiationAgent(), FakeActionAgent())
+                self.assertFalse((Path(temporary_directory) / "db").exists())
+            finally:
+                os.chdir(old_cwd)
+
+        self.assertNotIn("llm_controller.memory", sys.modules)
+        self.assertEqual([event[0] for event in events], [
+            "negotiation", "decisions", "env.step"])
+        self.assertIsNone(events[1][-1])
+        self.assertEqual(events[2][1], (1, 3))
+        self.assertTrue(events[2][2])
+        self.assertEqual(result["joint_action"], (1, 3))
 
 
 if __name__ == "__main__":
