@@ -1,0 +1,31 @@
+{
+  "schema": "codrivingllm.seed-manifest",
+  "schema_version": 1,
+  "manifest_id": "intersection-memory-off-controlled-v1",
+  "classification": "OUR EXPERIMENT DESIGN",
+  "paper_seed_claim": false,
+  "description": "Twenty fixed integer seeds for the controlled Intersection Memory-OFF experiment. These values were not provided by the CoDrivingLLM authors.",
+  "selection_policy": "The consecutive integers 0 through 19 were selected for simplicity, deterministic ordering, and transparent auditability.",
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ]
+}
