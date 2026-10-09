@@ -6,7 +6,10 @@ import sys
 import tempfile
 import unittest
 from pathlib import Path
+from types import SimpleNamespace
 from unittest import mock
+
+import numpy as np
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -25,6 +28,15 @@ def released_source(path):
 
 def current_source(path):
     return (ROOT / path).read_text(encoding="utf-8")
+
+
+def load_smoke_runner():
+    script_path = ROOT / "scripts" / "minimal_ollama_single_step.py"
+    spec = importlib.util.spec_from_file_location(
+        "minimal_ollama_single_step", script_path)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
 
 
 def function_node(source, class_name, function_name):
@@ -149,11 +161,7 @@ class ReleasedSemanticsTests(unittest.TestCase):
 
 class MemoryOffOrderingTests(unittest.TestCase):
     def test_memory_off_single_step_order_and_no_database(self):
-        script_path = ROOT / "scripts" / "minimal_ollama_single_step.py"
-        spec = importlib.util.spec_from_file_location(
-            "minimal_ollama_single_step", script_path)
-        module = importlib.util.module_from_spec(spec)
-        spec.loader.exec_module(module)
+        module = load_smoke_runner()
 
         events = []
 
@@ -198,6 +206,29 @@ class MemoryOffOrderingTests(unittest.TestCase):
         self.assertEqual(events[2][1], (1, 3))
         self.assertTrue(events[2][2])
         self.assertEqual(result["joint_action"], (1, 3))
+
+    def test_numpy_joint_action_summary_is_json_safe_and_ordered(self):
+        module = load_smoke_runner()
+        backend = SimpleNamespace(
+            backend="ollama",
+            model="qwen2.5:7b",
+            endpoint="http://127.0.0.1:11435",
+        )
+        args = SimpleNamespace(seed=0)
+        result = {
+            "joint_action": (
+                np.int32(4), np.int32(1), np.int32(1), np.int32(1)),
+            "reward": np.float32(1.25),
+            "terminated": np.bool_(False),
+        }
+
+        summary = module.build_summary(backend, args, result)
+        encoded = json.dumps(summary)
+
+        self.assertEqual(summary["joint_action"], [4, 1, 1, 1])
+        self.assertTrue(all(type(action) is int
+                            for action in summary["joint_action"]))
+        self.assertEqual(json.loads(encoded)["joint_action"], [4, 1, 1, 1])
 
 
 if __name__ == "__main__":

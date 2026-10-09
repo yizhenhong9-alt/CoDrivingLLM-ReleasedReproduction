@@ -80,3 +80,13 @@ Before any status becomes `IMPLEMENTED`, record:
 - Decision-semantic impact: no Memory retrieval/update behavior was modified or enabled. The original `Run_multi_CAV_LLM.py` remains unchanged; the new runner removes unused embedding/Chroma side effects only for the explicit Memory-OFF smoke path.
 - Local result: fake ordering and no-database test passed; `llm_controller.memory` was absent from `sys.modules`. No simulator or real LLM was executed.
 - RDP gate: `docs/RDP_SMOKE_TEST.md` defines environment, Ollama inventory, and one-step commands. A full episode remains unauthorized.
+
+### P07 - Smoke runner JSON serialization and module launch
+
+- RDP evidence: Python 3.8.20, pandas 1.3.5, gym 0.15.3, numpy 1.24.4, and Ollama `qwen2.5:7b` completed reset, negotiation, four decisions, joint action `[4, 1, 1, 1]`, and one `env.step`; only the subsequent summary `json.dumps()` failed because the action values were NumPy `int32` objects.
+- Reference evidence: Thesis `scripts/phase2c_integrated_single_step.py:20-31,140,167-168` uses a general NumPy-to-JSON conversion and converts action IDs with `int(...)`; Thesis `notes/reproduction_log.md:155-171` records that repository-root `python -m scripts.phase2b_llm_smoke` resolves local imports without a `sys.path` source modification. Antigravity contains joint-action printing/execution but no equivalent NumPy JSON or module-launch fix.
+- Modified location: `scripts/minimal_ollama_single_step.py`, `build_summary()` and `main()`.
+- Change: convert only the post-step reporting copy with `[int(a) for a in result["joint_action"]]`; the tuple supplied to `env.step()` is unchanged. RDP instructions now launch the runner as a module from repository root.
+- Reason: Python's standard JSON encoder does not serialize `numpy.int32`; direct script-file launch places `scripts/` instead of the repository root first on the import path.
+- Decision-semantic impact: none. Conversion occurs after `env.step`; action values and ordering are preserved. No prompt, parser, action mapping, negotiation, safety, memory, simulator, or backend code changed.
+- Local result: regression tests cover NumPy `int32` serialization and exact `[4, 1, 1, 1]` ordering; the existing fake test continues to prove one `env.step`, `memory=None`, no database creation, and Released prompt/parser/action-mapping identity.

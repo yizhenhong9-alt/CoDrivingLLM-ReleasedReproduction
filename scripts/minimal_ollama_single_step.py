@@ -34,6 +34,21 @@ def parse_args(argv=None):
     return parser.parse_args(argv)
 
 
+def build_summary(chat_backend, args, result):
+    """Build a JSON-safe summary without changing the executed action tuple."""
+    return {
+        "backend": chat_backend.backend,
+        "model": chat_backend.model,
+        "endpoint": chat_backend.endpoint,
+        "seed": args.seed,
+        "memory_mode": "off",
+        "memory_instantiated": False,
+        "joint_action": [int(a) for a in result["joint_action"]],
+        "reward": float(result["reward"]),
+        "terminated": bool(result["terminated"]),
+    }
+
+
 def main(argv=None):
     args = parse_args(argv)
 
@@ -61,17 +76,7 @@ def main(argv=None):
             env, chat_backend=chat_backend)
         action_agent = LlmAgent_action_module(env, chat_backend=chat_backend)
         result = run_policy_step(env, negotiation_agent, action_agent)
-        print(json.dumps({
-            "backend": chat_backend.backend,
-            "model": chat_backend.model,
-            "endpoint": chat_backend.endpoint,
-            "seed": args.seed,
-            "memory_mode": "off",
-            "memory_instantiated": False,
-            "joint_action": list(result["joint_action"]),
-            "reward": float(result["reward"]),
-            "terminated": bool(result["terminated"]),
-        }, indent=2))
+        print(json.dumps(build_summary(chat_backend, args, result), indent=2))
     finally:
         env.close()
 

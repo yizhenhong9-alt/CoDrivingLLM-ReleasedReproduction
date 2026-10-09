@@ -59,12 +59,20 @@ STOP if the service is unavailable, the model is absent or ambiguous, or its dig
 This command performs centralized negotiation, all released per-CAV decisions, and exactly one joint `env.step`. It does not instantiate `DrivingMemory`.
 
 ```powershell
-& $Python scripts\minimal_ollama_single_step.py `
+& $Python -m scripts.minimal_ollama_single_step `
     --backend ollama `
     --model 'qwen2.5:7b' `
     --endpoint 'http://127.0.0.1:11435' `
     --timeout 120 `
     --seed 0
 ```
+
+Run this command only after `Set-Location -LiteralPath $Repo`. Module launch keeps
+the repository root on Python's import path, so the repository-local
+`highway_env` is selected without modifying `sys.path` or setting `PYTHONPATH`.
+
+The final JSON converts only its reporting copy of each joint-action value to a
+built-in Python integer. The original tuple, value order, and types passed into
+`env.step(tuple(action), env)` are not changed.
 
 Review and preserve the complete terminal output manually. Do not proceed to a full episode if parsing fails, an action maps to `-1`, a database is created, the local `highway_env` is not active, or more than one environment transition occurs.
