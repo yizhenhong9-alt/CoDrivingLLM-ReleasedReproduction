@@ -90,3 +90,15 @@ Before any status becomes `IMPLEMENTED`, record:
 - Reason: Python's standard JSON encoder does not serialize `numpy.int32`; direct script-file launch places `scripts/` instead of the repository root first on the import path.
 - Decision-semantic impact: none. Conversion occurs after `env.step`; action values and ordering are preserved. No prompt, parser, action mapping, negotiation, safety, memory, simulator, or backend code changed.
 - Local result: regression tests cover NumPy `int32` serialization and exact `[4, 1, 1, 1]` ordering; the existing fake test continues to prove one `env.step`, `memory=None`, no database creation, and Released prompt/parser/action-mapping identity.
+
+### P08 - Intersection Memory-OFF full-episode runner
+
+- New file: `scripts/minimal_ollama_full_episode.py`.
+- Released evidence: `Run_multi_CAV_LLM.py:58-102` defines the outer episode loop and policy-cycle order; `highway_env/envs/intersection_env.py:98-103,279-282` defines environment termination and arrival; `highway_env/envs/common/abstract.py:451-518` defines the single transition contract.
+- Change: add a one-episode runner that repeats the existing Negotiation → per-CAV Action Decision → `env.step(tuple(action), env)` sequence, keeps Memory OFF with `memory=None`, writes each completed transition immediately, and separates environment termination, max-step guard, and runtime error outcomes.
+- Recording: every invocation uses a new exclusive output directory containing run metadata, JSONL step records, summary, and an error traceback when applicable. NumPy values are converted only in reporting copies.
+- Removed side effects relative to the Released runner: no `DrivingMemory`, render window, MP4 writer, or XLSX workbook. No additional simulator transition or warm-up is introduced.
+- Decision-semantic impact: none intended. Existing controller modules, prompt, parser, negotiation, safety, action mapping, backend, memory algorithm, and simulator are unchanged. Invalid action ID is surfaced as an error rather than sent to the simulator; no fallback is supplied.
+- Guard semantics: default `max_steps=100` is an execution protection limit, not a Released or paper setting. The Released Intersection default duration boundary is 249 policy steps.
+- Metrics: collision and arrival use explicit simulator attributes/methods; independent success, LLM call count, and parser failure count are marked unavailable because the Released interfaces do not expose reliable definitions/counters.
+- Validation: Local fake regression covers call ordering, one transition per cycle, action identity, Memory OFF, termination, max-step stop, error propagation, NumPy JSON, exclusive result directories, and protected-source identity. Real Ollama/simulator execution is deferred to RDP.
