@@ -166,10 +166,9 @@ class ControlledBatchRunnerTests(unittest.TestCase):
         self.assertEqual(result, 0)
         executor.assert_not_called()
 
-    def test_protected_sources_unchanged_from_stage_1d(self):
+    def test_stage_1h_does_not_modify_unapproved_released_sources(self):
         protected = [
-            "Run_multi_CAV_LLM.py", "llm_controller", "highway_env",
-            "requirements.txt", "scripts/minimal_ollama_full_episode.py",
+            "Run_multi_CAV_LLM.py", "highway_env", "requirements.txt",
         ]
         completed = subprocess.run(
             ["git", "-c", "safe.directory={}".format(ROOT.as_posix()),

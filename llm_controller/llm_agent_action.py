@@ -9,7 +9,9 @@ import re
 class LlmAgent_action_module():
     def __init__(self, env, chat_backend=None, backend="ollama",
                  model="qwen2.5:7b", endpoint="http://127.0.0.1:11435",
-                 timeout=120):
+                 timeout=120, memory_mode="off"):
+        if memory_mode not in ("off", "on"):
+            raise ValueError("memory_mode must be 'off' or 'on'")
         # self.env = env
         # self.action_space = self.env.action_space
         # self.observation_space = self.env.observation_space
@@ -29,6 +31,7 @@ class LlmAgent_action_module():
         self.pre_prompt = PRE_DEF_PROMPT()
         self.chat_backend = chat_backend or ChatBackend(
             backend=backend, model=model, endpoint=endpoint, timeout=timeout)
+        self.memory_mode = memory_mode
         self.get_actions(env)
 
 
@@ -45,7 +48,9 @@ class LlmAgent_action_module():
             prompt_info = self.prompt_engineer(ego_veh, env.road, env, negotiation_results, conflicting_info)  # prompt engineer
             # print("prompt_info:", prompt_info)
             llm_action = self.send_to_chatgpt(ego_veh, prompt_info, negotiation_results, memory)
-            # self.memory_update(memory, prompt_info, llm_action)  # active this line to restore new memory during interaction
+            if self.memory_mode == "on":
+                self._require_memory(memory)
+                self.memory_update(memory, prompt_info, llm_action)
             llm_actions.append(llm_action)
             print("llm_action:", llm_action, ego_veh, 'speed now:', ego_veh.speed)
         return llm_actions
@@ -124,6 +129,11 @@ class LlmAgent_action_module():
         experience += f"Above messages are some examples of how you make a decision in the past. Those scenarios are similar to the current scenario. You should refer to those examples to make a decision for the current scenario."
         return experience
 
+    @staticmethod
+    def _require_memory(memory):
+        if memory is None:
+            raise ValueError("Memory mode is ON but no DrivingMemory instance was provided")
+
     def memory_update(self, memory, prompt_info, llm_action):
         human_question = str(None)
         negotiation = str(None)  # memory store the dangerous info (which negotiation is ego to yield) for ego vehicle
@@ -150,8 +160,11 @@ class LlmAgent_action_module():
             decision_cautions = self.pre_prompt.get_decision_cautions()
         # action_name = ACTIONS_ALL.get(action_id, "Unknown Action")
         # action_description = ACTIONS_DESCRIPTION.get(action_id, "No description available")
-        # past_memory = self.relative_memory(memory, current_scenario)  # with this line to active memory retrivel, active line46 to build your own database before you output past memory
-        past_memory = ''
+        if self.memory_mode == "on":
+            self._require_memory(memory)
+            past_memory = self.relative_memory(memory, current_scenario)
+        else:
+            past_memory = ''
 
         prompt = (f"{message_prefix}"
                   f"You, the 'ego' car, are now driving. You have already driven for some seconds.\n"

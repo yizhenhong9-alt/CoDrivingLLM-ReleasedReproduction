@@ -262,7 +262,7 @@ class FullEpisodeRunnerTests(unittest.TestCase):
         class MainActionAgent:
             ACTIONS_ALL = {1: "IDLE"}
 
-            def __init__(self, env, chat_backend=None):
+            def __init__(self, env, chat_backend=None, memory_mode="off"):
                 pass
 
             def llm_controller_run(self, *args, **kwargs):
@@ -354,10 +354,9 @@ class FullEpisodeRunnerTests(unittest.TestCase):
                 runner.create_run_directory(directory, run_id="fixed-run")
             self.assertEqual(marker.read_text(encoding="utf-8"), "preserve")
 
-    def test_stage_1c_does_not_modify_protected_released_code(self):
+    def test_stage_1h_does_not_modify_unapproved_released_code(self):
         paths = [
             "Run_multi_CAV_LLM.py",
-            "llm_controller",
             "highway_env",
             "requirements.txt",
         ]

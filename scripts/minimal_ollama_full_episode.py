@@ -183,7 +183,8 @@ def capture_environment_cleanup(env):
 
 
 def run_episode(env, negotiation_agent_factory, action_agent_factory,
-                max_steps, record_step=None, clock=time.perf_counter):
+                max_steps, record_step=None, clock=time.perf_counter,
+                memory_factory=None):
     if max_steps <= 0:
         raise ValueError("max_steps must be positive")
 
@@ -193,6 +194,7 @@ def run_episode(env, negotiation_agent_factory, action_agent_factory,
         step_started = clock()
         negotiation_agent = negotiation_agent_factory()
         action_agent = action_agent_factory()
+        memory = memory_factory() if memory_factory is not None else None
 
         negotiation_prompt, conflicting_info = (
             negotiation_agent.llm_controller_run(env))
@@ -201,7 +203,7 @@ def run_episode(env, negotiation_agent_factory, action_agent_factory,
             negotiation_prompt,
             conflicting_info,
             env.controlled_vehicles,
-            memory=None,
+            memory=memory,
         )
         action = [item for sublist in llm_actions for item in sublist]
         if action_agent.ACTIONS_ALL is not None and any(
@@ -250,13 +252,19 @@ def run_episode(env, negotiation_agent_factory, action_agent_factory,
 
 def parse_args(argv=None):
     parser = argparse.ArgumentParser(
-        description="Run one Intersection Memory-OFF CoDrivingLLM episode.")
+        description="Run one Intersection CoDrivingLLM episode.")
     parser.add_argument("--backend", default="ollama", choices=["ollama"])
     parser.add_argument("--model", default="qwen2.5:7b")
     parser.add_argument("--endpoint", default="http://127.0.0.1:11435")
     parser.add_argument("--timeout", type=float, default=120)
     parser.add_argument("--seed", type=int, default=0)
     parser.add_argument("--max-steps", type=int, default=100)
+    parser.add_argument("--memory-mode", choices=["off", "on"], default="off")
+    parser.add_argument("--memory-db-path")
+    parser.add_argument("--embedding-backend", choices=["ollama"], default="ollama")
+    parser.add_argument("--embedding-model", default="nomic-embed-text:latest")
+    parser.add_argument("--embedding-endpoint", default="http://127.0.0.1:11435")
+    parser.add_argument("--embedding-timeout", type=float, default=120)
     parser.add_argument(
         "--output-dir", default="runs/intersection-memory-off")
     return parser.parse_args(argv)
@@ -264,6 +272,8 @@ def parse_args(argv=None):
 
 def main(argv=None):
     args = parse_args(argv)
+    if args.memory_mode == "on" and not args.memory_db_path:
+        raise ValueError("--memory-db-path is required when Memory is ON")
     repository = Path(__file__).resolve().parents[1]
     run_directory = create_run_directory(args.output_dir)
     metadata_path = run_directory / "run_metadata.json"
@@ -279,7 +289,15 @@ def main(argv=None):
     run_metadata = {
         "scenario": "intersection-multi-agent-v0",
         "seed": args.seed,
-        "memory_mode": "off",
+        "memory_mode": args.memory_mode,
+        "memory": {
+            "database_path": str(Path(args.memory_db_path).resolve()) if args.memory_db_path else None,
+            "embedding_backend": args.embedding_backend if args.memory_mode == "on" else None,
+            "embedding_model": args.embedding_model if args.memory_mode == "on" else None,
+            "embedding_endpoint": args.embedding_endpoint if args.memory_mode == "on" else None,
+            "embedding_timeout_seconds": args.embedding_timeout if args.memory_mode == "on" else None,
+            "lifecycle": "persistent released-style scenario database" if args.memory_mode == "on" else "not instantiated",
+        },
         "backend": args.backend,
         "model": args.model,
         "ollama_endpoint": args.endpoint,
@@ -319,6 +337,20 @@ def main(argv=None):
             endpoint=args.endpoint,
             timeout=args.timeout,
         )
+        memory_factory = None
+        if args.memory_mode == "on":
+            from llm_controller.memory import DrivingMemory
+            memory_database = Path(args.memory_db_path).resolve()
+
+            def memory_factory():
+                return DrivingMemory(
+                    env,
+                    embedding_backend=args.embedding_backend,
+                    embedding_model=args.embedding_model,
+                    embedding_endpoint=args.embedding_endpoint,
+                    embedding_timeout=args.embedding_timeout,
+                    persist_directory=str(memory_database),
+                )
 
         def record_completed_step(record):
             append_jsonl(steps_path, record)
@@ -329,9 +361,10 @@ def main(argv=None):
             negotiation_agent_factory=lambda: LlmAgent_negotiation_module(
                 env, chat_backend=chat_backend),
             action_agent_factory=lambda: LlmAgent_action_module(
-                env, chat_backend=chat_backend),
+                env, chat_backend=chat_backend, memory_mode=args.memory_mode),
             max_steps=args.max_steps,
             record_step=record_completed_step,
+            memory_factory=memory_factory,
         )
         summary = {
             **{key: value for key, value in result.items()
