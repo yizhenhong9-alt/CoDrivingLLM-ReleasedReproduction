@@ -73,3 +73,8 @@ temp/
 *.pt
 *.pth
 models/
+
+# Stage 1I text-only archival boundary (never archive Chroma state)
+artifacts/stage1i_intersection_memory_on/**/memory-db/
+artifacts/stage1i_intersection_memory_on/**/*.bin
+artifacts/stage1i_intersection_memory_on/**/*.pickle
