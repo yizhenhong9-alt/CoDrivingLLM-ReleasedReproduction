@@ -1,0 +1,51 @@
+{
+  "schema": "codrivingllm.seed-manifest",
+  "schema_version": 1,
+  "manifest_id": "merge-memory-off-controlled-v1",
+  "classification": "OUR EXPERIMENT DESIGN",
+  "paper_seed_claim": false,
+  "description": "Twenty fixed integer seeds for the controlled Merge Memory-OFF experiment. The paper specifies twenty repetitions with different random seeds but does not provide these values.",
+  "selection_policy": "The consecutive integers 0 through 19 were selected for deterministic ascending execution and transparent auditability.",
+  "scenario": "merge-multi-agent-v0",
+  "memory_mode": "off",
+  "seed_count": 20,
+  "unique": true,
+  "order": "ascending",
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "environment_config": {
+    "simulation_frequency": 20,
+    "policy_frequency": 5,
+    "duration": 40
+  },
+  "effective_controlled_vehicles": 3,
+  "expected_action_tuple_arity": 3,
+  "duration_boundary_policy_steps": 200,
+  "success_metric": {
+    "classification": "PAPER-SPECIFIED success concept + OUR EXPERIMENT DESIGN executable derivation using Released fields",
+    "definition": "completion_status == environment_terminated AND all controlled_vehicle_arrival values are true AND all controlled_vehicle_collision values are false",
+    "released_independent_metric": "unavailable"
+  },
+  "retry_policy": "none",
+  "replacement_seed_policy": "none"
+}
