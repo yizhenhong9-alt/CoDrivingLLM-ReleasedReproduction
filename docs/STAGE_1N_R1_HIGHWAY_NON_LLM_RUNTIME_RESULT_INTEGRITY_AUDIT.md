@@ -181,3 +181,147 @@ The argparse usage/error text emitted during the full suite is an expected exist
 ## 12. STOP point
 
 Stop after this audit and, if the operator chooses, the single bounded two-cycle Memory-ON confirmation. Do not proceed to Stage 1O, formal Highway experimentation, MultiAgentAction conversion, route/destination invention, Roundabout implementation, or reconstruction/extension work.
+
+---
+
+## 13. Final closure addendum: bounded Memory-ON runtime
+
+This addendum closes the optional two-cycle check proposed above. It preserves the original provenance of the six non-LLM probes and adds a seventh, separately classified observation.
+
+> **OPERATOR-PROVIDED RDP EVIDENCE — RAW RESULT ARTIFACT NOT AVAILABLE IN THE LOCAL REPOSITORY**
+
+The operator reports that the bounded Memory-ON probe was executed in `E:\YiZhen\Thesis\CoDrivingLLM-ReleasedReproduction` at RDP HEAD `469e9dc63110583f5273d1112bbfd8511e6c962a`, using diagnostic seed `987654`, Ollama chat model `qwen2.5:7b`, endpoint `http://127.0.0.1:11435`, and Ollama embedding model `nomic-embed-text:latest`. It was diagnostic only, not a formal experiment.
+
+The explicitly supplied temporary database path was:
+
+```text
+E:\YiZhen\Thesis\CoDrivingLLM-ReleasedReproduction\runs\highway-stage1n-r1-preflight-memory-on\memory-db\highway-v0
+```
+
+Although the command specified an output root and created a temporary RDP database, the Local repository contains no tracked raw artifact establishing its contents. This addendum does not invent an output path, result JSON, hash, timestamp, log, or file count. Runtime values below remain operator-provided evidence rather than independently inspected raw evidence.
+
+## 14. Repository/static Memory contract
+
+Repository-verifiable facts are:
+
+- Stage 1G identifies `DrivingMemory.retrieveMemory()` and `addMemory()` as the Released interfaces and records that add failures retain the Released print-and-swallow behavior.
+- Stage 1H explicitly classifies the enabled path as Released-style, not paper-faithful, and records two expected consequences: writes occur before `env.step()`, and a shared store exposes earlier same-cycle writes to later CAVs.
+- `llm_controller/llm_agent_action.py` calls `retrieveMemory(query_scenario, top_k=2)` once per controlled CAV and calls `addMemory(...)` immediately after that CAV's LLM decision.
+- `scripts/stage1n_r1_highway_runtime_probe.py` wraps those unchanged interfaces only to record query/write counts; it requires four retrievals and four writes before calling one joint `env.step()` per cycle.
+- The probe is fixed at two cycles, rejects formal seeds and existing/cross-scenario/formal DB paths, and provides no retry, fallback, replacement seed, success metric, or quality evaluation.
+
+## 15. Memory-ON runtime reconciliation
+
+All observations in this table are **OPERATOR-PROVIDED RDP EVIDENCE — RAW RESULT ARTIFACT NOT AVAILABLE IN THE LOCAL REPOSITORY**.
+
+| Contract item | Repository/static expectation | Operator-provided observation | Verdict |
+|---|---|---|---|
+| Initial DB | Fresh diagnostic path begins at zero | Loader reported 0 items | **CONFIRMED** |
+| Retrieval count | 4 controlled CAVs → 4 retrieval attempts per complete cycle | 4 in cycle 1 and 4 in cycle 2 | **CONFIRMED** |
+| Retrieval `top_k` | ActionAgent explicitly requests `top_k=2` | Every recorded retrieval requested 2 | **CONFIRMED** |
+| Write count | One immediate write per CAV decision → 4 per cycle | 4 in cycle 1 and 4 in cycle 2 | **CONFIRMED** |
+| Persistence | Shared DB retained across the two cycles | Cycle 2 loader reported 4 items; final count 8 | **CONFIRMED** |
+| Same-cycle visibility | Later CAV queries can see earlier same-cycle pre-step writes | Visible counts were `0,1,2,3` then `4,5,6,7` | **CONFIRMED** |
+| Step ordering | Four decisions/writes precede one joint step | One `env_step` followed four writes in each cycle, at counts 4 and 8 | **CONFIRMED** |
+| Joint actions | Four parsed CAV decisions are flattened to one tuple | Cycle 1 `[1,1,3,3]`; cycle 2 `[3,1,1,1]` | **CONFIRMED** |
+
+Memory count progression was therefore:
+
+```text
+cycle 1: query@0 → write 0→1 → query@1 → write 1→2
+         → query@2 → write 2→3 → query@3 → write 3→4 → env.step@4
+
+cycle 2: query@4 → write 4→5 → query@5 → write 5→6
+         → query@6 → write 6→7 → query@7 → write 7→8 → env.step@8
+```
+
+The reported decisions were:
+
+| Cycle | CAV 0 | CAV 1 | CAV 2 | CAV 3 | Joint action |
+|---:|---|---|---|---|---|
+| 1 | `IDLE` (1) | `IDLE` (1) | `FASTER` (3) | `FASTER` (3) | `[1,1,3,3]` |
+| 2 | `FASTER` (3) | `IDLE` (1) | `IDLE` (1) | `IDLE` (1) | `[3,1,1,1]` |
+
+Runtime confirms ordering, persistence, and visibility behavior. It does not establish that retrieved memories were semantically useful, that the stored records encode transition outcomes, or that Memory improved driving quality.
+
+## 16. Same-cycle visibility and pre-transition semantics
+
+The visible count sequences prove that each later CAV query observed the database after the preceding CAV's same-cycle write. Because the one joint simulator step occurred only after all four writes, those records were stored before the transition they might otherwise be expected to evaluate.
+
+Accordingly, the observed Released-style memory is:
+
+- shared across controlled CAV decisions;
+- immediately visible within the same policy cycle;
+- **pre-transition / pre-outcome**, not post-transition outcome-grounded memory.
+
+This confirms the Stage 1H contract; it is not a claim that the paper explicitly specifies this lifecycle.
+
+## 17. Cross-layer Highway mismatch
+
+Both of the following findings must be retained:
+
+```text
+LLM / Memory layer:
+4 controlled CAVs
+→ 4 retrievals
+→ 4 LLM decisions
+→ 4 writes
+→ four-element joint action
+→ 1 env.step
+
+Active Released Highway simulator action layer:
+DiscreteMetaAction consumes the first tuple entry;
+tail entries do not provide equivalent independent multi-agent actuation.
+```
+
+The earlier action probe established that changing tuple entries 1–3 while preserving entry 0 did not change the tested simulator-relevant transition, while changing entry 0 did. The Memory-ON joint actions therefore demonstrate decision/memory multiplicity at the LLM layer, not a genuine four-agent action-vector interface at the simulator layer.
+
+This does **not** mean “only CAV0 moves” or “only CAV0 changes.” Other controlled vehicles can evolve through simulator dynamics. The precise mismatch concerns independent external action consumption/actuation.
+
+No `MultiAgentAction` conversion or simulator fix is authorized in the Released reproduction.
+
+## 18. Retrieval warning
+
+During cycle 1, after the first record existed, Chroma reportedly warned:
+
+```text
+Number of requested results 2 is greater than number of elements in index 1,
+updating n_results = 1
+```
+
+This is consistent with a request for `top_k=2` against an index containing one record. Chroma bounded the returned result count to the available element count. It does not contradict the recorded retrieval attempt, does not invalidate the subsequent write/count progression, and is not classified as probe failure. No rerun is required.
+
+## 19. Final Stage 1N-R1 verdict
+
+Memory verdict:
+
+**STAGE_1N_R1_HIGHWAY_MEMORY_ON_BOUNDED_RUNTIME_CONFIRMED**
+
+Overall closure verdict:
+
+**STAGE_1N_R1_RELEASED_HIGHWAY_RUNTIME_CHARACTERIZED_WITH_FORMAL_EXPERIMENT_BLOCKED**
+
+The seven operator-provided observations, reconciled with repository/static evidence, substantially characterize the executable Released Highway path: topology, seed behavior, action consumption, arrival absence, 40-step termination, pre-LLM candidate/conflict behavior, and bounded Released-style Memory ordering/visibility.
+
+This remains a contract characterization, not a numerical paper reproduction and not an independently verified raw-artifact audit.
+
+## 20. Formal experiment blocker remains unchanged
+
+**HIGHWAY_SUCCESS_METRIC_UNAVAILABLE_FROM_RELEASED_FIELDS** remains in force.
+
+Memory runtime evidence supplies no missing task destination or arrival predicate. Controlled routes remain absent, `destination` falls back to current position, `has_arrived` is unavailable, and duration termination at policy step 40 is not paper-style task completion. Therefore no Highway OFF/ON manifest, formal batch runner, success rate, no-collision-as-success rule, or duration-as-success rule may be created.
+
+Scenario status remains:
+
+- Intersection: formal Memory-OFF and Released-style Memory-ON 20-seed runs completed.
+- Merge: formal Memory-OFF and Released-style Memory-ON 20-seed runs completed.
+- Highway: executable behavior characterized; formal OFF/ON 20-seed experiment blocked.
+- Roundabout: present in the paper but absent from Released Code; outside Released-Code reproduction.
+
+## 21. Standalone LLM negotiation decision
+
+A separate negotiation-with-LLM probe is **not required**. The pre-LLM candidate/conflict scope was already runtime-confirmed, static source establishes the call chain, and the bounded Memory-ON probe exercised the real negotiation/action/backend path across two cycles. A standalone run would be redundant and would not resolve the formal success blocker.
+
+## 22. Final STOP point
+
+Stage 1N-R1 stops here. Do not begin Stage 1O, Highway reconstruction, formal Highway OFF/ON experiments, route/destination invention, MultiAgentAction conversion, or Roundabout implementation.
