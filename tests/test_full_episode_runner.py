@@ -6,7 +6,7 @@ import sys
 import tempfile
 import unittest
 from pathlib import Path
-from types import ModuleType
+from types import ModuleType, SimpleNamespace
 from unittest import mock
 
 import numpy as np
@@ -34,9 +34,13 @@ class FakeEnv:
     def __init__(self, terminate_at=None, close_error=None):
         self.controlled_vehicles = [FakeVehicle(), FakeVehicle()]
         self.vehicle = self.controlled_vehicles[0]
+        self.spec = SimpleNamespace(id="intersection-multi-agent-v0")
+        self.road = SimpleNamespace(vehicles=list(self.controlled_vehicles))
+        self.action_space = SimpleNamespace(spaces=[object(), object()])
         self.config = {
             "duration": 50,
             "policy_frequency": 5,
+            "simulation_frequency": 15,
             "offroad_terminal": False,
         }
         self.steps = 0

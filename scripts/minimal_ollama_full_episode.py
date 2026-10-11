@@ -11,6 +11,135 @@ from importlib import metadata
 from pathlib import Path
 
 
+INTERSECTION_SCENARIO = "intersection-multi-agent-v0"
+MERGE_SCENARIO = "merge-multi-agent-v0"
+APPROVED_SCENARIOS = (INTERSECTION_SCENARIO, MERGE_SCENARIO)
+MERGE_CONFIG = {
+    "simulation_frequency": 20,
+    "policy_frequency": 5,
+    "duration": 40,
+}
+
+
+def scenario_config(scenario):
+    if scenario not in APPROVED_SCENARIOS:
+        raise ValueError("Unsupported scenario: {}".format(scenario))
+    return dict(MERGE_CONFIG) if scenario == MERGE_SCENARIO else None
+
+
+def default_output_directory(scenario, memory_mode):
+    suffix = "memory-on" if memory_mode == "on" else "memory-off"
+    scene = "merge" if scenario == MERGE_SCENARIO else "intersection"
+    return "runs/{}-{}".format(scene, suffix)
+
+
+def resolved_environment_id(env):
+    return getattr(getattr(env, "spec", None), "id", None)
+
+
+def action_tuple_arity(env):
+    spaces = getattr(getattr(env, "action_space", None), "spaces", None)
+    return len(spaces) if spaces is not None else None
+
+
+def controlled_vehicle_order(env):
+    ordering = []
+    for index, vehicle in enumerate(env.controlled_vehicles):
+        ordering.append({
+            "index": index,
+            "vehicle_id": json_safe(getattr(vehicle, "id", None)),
+            "lane_index": json_safe(getattr(vehicle, "lane_index", None)),
+            "position": json_safe(getattr(vehicle, "position", None)),
+            "speed": json_safe(getattr(vehicle, "speed", None)),
+        })
+    return ordering
+
+
+def validate_post_reset_topology(env, scenario, testing_seed):
+    actual_id = resolved_environment_id(env)
+    unwrapped = getattr(env, "unwrapped", env)
+    controlled_count = len(env.controlled_vehicles)
+    tuple_arity = action_tuple_arity(env)
+    record = {
+        "environment_id": actual_id,
+        "environment_class": "{}.{}".format(
+            type(unwrapped).__module__, type(unwrapped).__qualname__),
+        "controlled_vehicle_count": controlled_count,
+        "road_vehicle_count": len(env.road.vehicles),
+        "action_tuple_arity": tuple_arity,
+        "duration": env.config.get("duration"),
+        "policy_frequency": env.config.get("policy_frequency"),
+        "simulation_frequency": env.config.get("simulation_frequency"),
+        "testing_seed": testing_seed,
+        "controlled_vehicle_order": controlled_vehicle_order(env),
+    }
+    if actual_id != scenario:
+        raise RuntimeError(
+            "Environment ID mismatch: expected {}, got {}".format(
+                scenario, actual_id))
+    if scenario == MERGE_SCENARIO:
+        if controlled_count != 3:
+            raise RuntimeError(
+                "Merge requires exactly 3 controlled CAVs; got {}".format(
+                    controlled_count))
+        if tuple_arity != 3:
+            raise RuntimeError(
+                "Merge requires action tuple arity 3; got {}".format(
+                    tuple_arity))
+        for field, expected in MERGE_CONFIG.items():
+            if env.config.get(field) != expected:
+                raise RuntimeError(
+                    "Merge {} mismatch: expected {}, got {}".format(
+                        field, expected, env.config.get(field)))
+    return record
+
+
+def validate_memory_database_path(scenario, path):
+    resolved = Path(path).resolve()
+    other = (MERGE_SCENARIO if scenario == INTERSECTION_SCENARIO
+             else INTERSECTION_SCENARIO)
+    if other in resolved.parts:
+        raise ValueError(
+            "Memory database path belongs to another scenario: {}".format(
+                resolved))
+    if scenario == MERGE_SCENARIO and MERGE_SCENARIO not in resolved.parts:
+        raise ValueError(
+            "Merge Memory database path must use the {} namespace: {}"
+            .format(MERGE_SCENARIO, resolved))
+    return resolved
+
+
+def require_fresh_memory_database_path(scenario, path):
+    resolved = validate_memory_database_path(scenario, path)
+    if resolved.exists():
+        raise FileExistsError(
+            "Memory batch requires a fresh absent database path: {}".format(
+                resolved))
+    return resolved
+
+
+def classify_derived_success(summary):
+    arrivals = summary.get("controlled_vehicle_arrival")
+    collisions = summary.get("controlled_vehicle_collision")
+    return bool(
+        summary.get("completion_status") == "environment_terminated"
+        and isinstance(arrivals, list)
+        and arrivals
+        and all(value is True for value in arrivals)
+        and isinstance(collisions, list)
+        and len(collisions) == len(arrivals)
+        and all(value is False for value in collisions)
+    )
+
+
+def merge_environment_terminated(env):
+    return (
+        any(bool(vehicle.crashed) for vehicle in env.controlled_vehicles)
+        or env.steps
+        >= env.config["duration"] * env.config["policy_frequency"]
+    )
+
+
 def utc_now():
     return datetime.now(timezone.utc).isoformat()
 
@@ -106,9 +235,16 @@ def environment_terminal_reason(env):
     vehicles = env.controlled_vehicles
     if any(bool(vehicle.crashed) for vehicle in vehicles):
         return "controlled_vehicle_collision"
+    if resolved_environment_id(env) == MERGE_SCENARIO:
+        terminal_step = (
+            env.config["duration"] * env.config["policy_frequency"])
+        if env.steps >= terminal_step:
+            return "released_duration_limit"
+        return "unresolved_environment_terminal_condition"
     if all(bool(env.has_arrived(vehicle)) for vehicle in vehicles):
         return "all_controlled_vehicles_arrived"
-    terminal_step = env.config["duration"] * env.config["policy_frequency"] - 1
+    terminal_step = (
+        env.config["duration"] * env.config["policy_frequency"] - 1)
     if env.steps >= terminal_step:
         return "released_duration_limit"
     if env.config.get("offroad_terminal") and not env.vehicle.on_road:
@@ -252,7 +388,10 @@ def run_episode(env, negotiation_agent_factory, action_agent_factory,
 
 def parse_args(argv=None):
     parser = argparse.ArgumentParser(
-        description="Run one Intersection CoDrivingLLM episode.")
+        description="Run one approved CoDrivingLLM episode.")
+    parser.add_argument(
+        "--scenario", default=INTERSECTION_SCENARIO,
+        choices=APPROVED_SCENARIOS)
     parser.add_argument("--backend", default="ollama", choices=["ollama"])
     parser.add_argument("--model", default="qwen2.5:7b")
     parser.add_argument("--endpoint", default="http://127.0.0.1:11435")
@@ -265,8 +404,7 @@ def parse_args(argv=None):
     parser.add_argument("--embedding-model", default="nomic-embed-text:latest")
     parser.add_argument("--embedding-endpoint", default="http://127.0.0.1:11435")
     parser.add_argument("--embedding-timeout", type=float, default=120)
-    parser.add_argument(
-        "--output-dir", default="runs/intersection-memory-off")
+    parser.add_argument("--output-dir")
     return parser.parse_args(argv)
 
 
@@ -274,6 +412,13 @@ def main(argv=None):
     args = parse_args(argv)
     if args.memory_mode == "on" and not args.memory_db_path:
         raise ValueError("--memory-db-path is required when Memory is ON")
+    if args.output_dir is None:
+        args.output_dir = default_output_directory(
+            args.scenario, args.memory_mode)
+    memory_database = None
+    if args.memory_mode == "on":
+        memory_database = validate_memory_database_path(
+            args.scenario, args.memory_db_path)
     repository = Path(__file__).resolve().parents[1]
     run_directory = create_run_directory(args.output_dir)
     metadata_path = run_directory / "run_metadata.json"
@@ -287,11 +432,12 @@ def main(argv=None):
     completed_records = []
 
     run_metadata = {
-        "scenario": "intersection-multi-agent-v0",
+        "scenario": args.scenario,
+        "scenario_config": scenario_config(args.scenario),
         "seed": args.seed,
         "memory_mode": args.memory_mode,
         "memory": {
-            "database_path": str(Path(args.memory_db_path).resolve()) if args.memory_db_path else None,
+            "database_path": str(memory_database) if memory_database else None,
             "embedding_backend": args.embedding_backend if args.memory_mode == "on" else None,
             "embedding_model": args.embedding_model if args.memory_mode == "on" else None,
             "embedding_endpoint": args.embedding_endpoint if args.memory_mode == "on" else None,
@@ -329,8 +475,13 @@ def main(argv=None):
         )
         from llm_controller.llm_backend import ChatBackend
 
-        env = gym.make("intersection-multi-agent-v0")
+        config = scenario_config(args.scenario)
+        env = (gym.make(args.scenario, config=config)
+               if config is not None else gym.make(args.scenario))
         env.reset(is_training=False, testing_seeds=args.seed)
+        run_metadata["post_reset_topology"] = validate_post_reset_topology(
+            env, args.scenario, args.seed)
+        write_json(metadata_path, run_metadata)
         chat_backend = ChatBackend(
             backend=args.backend,
             model=args.model,
@@ -340,7 +491,6 @@ def main(argv=None):
         memory_factory = None
         if args.memory_mode == "on":
             from llm_controller.memory import DrivingMemory
-            memory_database = Path(args.memory_db_path).resolve()
 
             def memory_factory():
                 return DrivingMemory(
