@@ -1,0 +1,35 @@
+{
+  "status": "completed",
+  "completion_status": "environment_terminated",
+  "termination_reason": "all_controlled_vehicles_arrived",
+  "total_steps": 69,
+  "total_reward": 7.0,
+  "wall_clock_seconds": 415.1174324,
+  "llm_call_count": {
+    "value": null,
+    "status": "unavailable",
+    "reason": "Existing backend exposes only its latest call, not a counter."
+  },
+  "parser_failure_count": {
+    "value": null,
+    "status": "unavailable",
+    "reason": "Released parsers expose no failure counter."
+  },
+  "controlled_vehicle_collision": [
+    false,
+    false,
+    false,
+    false
+  ],
+  "controlled_vehicle_arrival": [
+    true,
+    true,
+    true,
+    true
+  ],
+  "success": {
+    "value": null,
+    "status": "unavailable",
+    "reason": "Released runner defines no independent success metric."
+  }
+}

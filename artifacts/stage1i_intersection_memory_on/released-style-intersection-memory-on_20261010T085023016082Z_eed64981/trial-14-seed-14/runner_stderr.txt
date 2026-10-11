@@ -1,0 +1,2 @@
+E:\YiZhen\Thesis\CoDrivingLLM-ReleasedReproduction\llm_controller\prompt_llm.py:381: RuntimeWarning: divide by zero encountered in scalar divide
+  ttc = distance / relativeSpeed

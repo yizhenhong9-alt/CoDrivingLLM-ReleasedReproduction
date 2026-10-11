@@ -1,0 +1,23 @@
+{
+  "planned_trials": 20,
+  "attempted_trials": 20,
+  "completed_trials": 20,
+  "environment_completed_trials": 20,
+  "failed_trials": 0,
+  "successful_trials": 6,
+  "unsuccessful_completed_trials": 14,
+  "success_rate_planned_denominator": {
+    "definition": "successful trials / all manifest-planned trials",
+    "value": 0.3
+  },
+  "success_rate_environment_completed_denominator": {
+    "definition": "successful trials / trials with completion_status=environment_terminated",
+    "value": 0.3
+  },
+  "paper_failure_denominator_equivalence": "unresolved",
+  "termination_reason_counts": {
+    "all_controlled_vehicles_arrived": 6,
+    "controlled_vehicle_collision": 14
+  },
+  "total_wall_clock_seconds": 6546.5506849
+}

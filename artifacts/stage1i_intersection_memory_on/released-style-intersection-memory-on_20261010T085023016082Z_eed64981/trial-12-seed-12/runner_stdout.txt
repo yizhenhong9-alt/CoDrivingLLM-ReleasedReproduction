@@ -1,0 +1,1016 @@
+==========Loaded  E:\YiZhen\Thesis\CoDrivingLLM-ReleasedReproduction\runs\stage1i_intersection_memory_on_20seeds\released-style-intersection-memory-on_20261010T085023016082Z_eed64981\memory-db\intersection-multi-agent-v0  Memory, Now the database has  2296  items.==========
+{MDPVehicle #768: [ 2.         54.40878255]: {}, MDPVehicle #880: [-54.94047126   2.        ]: {}, MDPVehicle #424: [ -2.         -42.02623767]: {}, MDPVehicle #24: [39.21599094 -2.        ]: {}}
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #768: [ 2.         54.40878255] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #880: [-54.94047126   2.        ] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #424: [ -2.         -42.02623767] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #24: [39.21599094 -2.        ] speed now: 5
+==========Loaded  E:\YiZhen\Thesis\CoDrivingLLM-ReleasedReproduction\runs\stage1i_intersection_memory_on_20seeds\released-style-intersection-memory-on_20261010T085023016082Z_eed64981\memory-db\intersection-multi-agent-v0  Memory, Now the database has  2300  items.==========
+{MDPVehicle #768: [ 2.         53.30178667]: {}, MDPVehicle #880: [-53.83347537   2.        ]: {}, MDPVehicle #424: [ -2.         -40.91924178]: {}, MDPVehicle #24: [38.10899506 -2.        ]: {}}
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #768: [ 2.         53.30178667] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #880: [-53.83347537   2.        ] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #424: [ -2.         -40.91924178] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #24: [38.10899506 -2.        ] speed now: 5
+==========Loaded  E:\YiZhen\Thesis\CoDrivingLLM-ReleasedReproduction\runs\stage1i_intersection_memory_on_20seeds\released-style-intersection-memory-on_20261010T085023016082Z_eed64981\memory-db\intersection-multi-agent-v0  Memory, Now the database has  2304  items.==========
+{MDPVehicle #768: [ 2.         52.19479078]: {}, MDPVehicle #880: [-52.72647949   2.        ]: {}, MDPVehicle #424: [ -2.        -39.8122459]: {}, MDPVehicle #24: [37.00199917 -2.        ]: {}}
+llm action: IDLE
+ New mem has been added ...
+llm_action: [1] MDPVehicle #768: [ 2.         52.19479078] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #880: [-52.72647949   2.        ] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #424: [ -2.        -39.8122459] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #24: [37.00199917 -2.        ] speed now: 5
+==========Loaded  E:\YiZhen\Thesis\CoDrivingLLM-ReleasedReproduction\runs\stage1i_intersection_memory_on_20seeds\released-style-intersection-memory-on_20261010T085023016082Z_eed64981\memory-db\intersection-multi-agent-v0  Memory, Now the database has  2308  items.==========
+{MDPVehicle #768: [ 2.        51.0877949]: {}, MDPVehicle #880: [-51.6194836   2.       ]: {}, MDPVehicle #424: [ -2.         -38.70525001]: {}, MDPVehicle #24: [35.89500329 -2.        ]: {}}
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #768: [ 2.        51.0877949] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #880: [-51.6194836   2.       ] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #424: [ -2.         -38.70525001] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #24: [35.89500329 -2.        ] speed now: 5
+==========Loaded  E:\YiZhen\Thesis\CoDrivingLLM-ReleasedReproduction\runs\stage1i_intersection_memory_on_20seeds\released-style-intersection-memory-on_20261010T085023016082Z_eed64981\memory-db\intersection-multi-agent-v0  Memory, Now the database has  2312  items.==========
+{MDPVehicle #768: [ 2.         49.98079901]: {}, MDPVehicle #880: [-50.51248772   2.        ]: {}, MDPVehicle #424: [ -2.         -37.59825413]: {}, MDPVehicle #24: [34.7880074 -2.       ]: {}}
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #768: [ 2.         49.98079901] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #880: [-50.51248772   2.        ] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #424: [ -2.         -37.59825413] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #24: [34.7880074 -2.       ] speed now: 5
+==========Loaded  E:\YiZhen\Thesis\CoDrivingLLM-ReleasedReproduction\runs\stage1i_intersection_memory_on_20seeds\released-style-intersection-memory-on_20261010T085023016082Z_eed64981\memory-db\intersection-multi-agent-v0  Memory, Now the database has  2316  items.==========
+{MDPVehicle #768: [ 2.         48.87380313]: {}, MDPVehicle #880: [-49.40549183   2.        ]: {}, MDPVehicle #424: [ -2.         -36.49125824]: {}, MDPVehicle #24: [33.68101152 -2.        ]: {}}
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #768: [ 2.         48.87380313] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #880: [-49.40549183   2.        ] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #424: [ -2.         -36.49125824] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #24: [33.68101152 -2.        ] speed now: 5
+==========Loaded  E:\YiZhen\Thesis\CoDrivingLLM-ReleasedReproduction\runs\stage1i_intersection_memory_on_20seeds\released-style-intersection-memory-on_20261010T085023016082Z_eed64981\memory-db\intersection-multi-agent-v0  Memory, Now the database has  2320  items.==========
+{MDPVehicle #768: [ 2.         47.76680724]: {}, MDPVehicle #880: [-48.29849595   2.        ]: {}, MDPVehicle #424: [ -2.         -35.38426236]: {}, MDPVehicle #24: [32.57401563 -2.        ]: {}}
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #768: [ 2.         47.76680724] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #880: [-48.29849595   2.        ] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #424: [ -2.         -35.38426236] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #24: [32.57401563 -2.        ] speed now: 5
+==========Loaded  E:\YiZhen\Thesis\CoDrivingLLM-ReleasedReproduction\runs\stage1i_intersection_memory_on_20seeds\released-style-intersection-memory-on_20261010T085023016082Z_eed64981\memory-db\intersection-multi-agent-v0  Memory, Now the database has  2324  items.==========
+{MDPVehicle #768: [ 2.         46.65981136]: {}, MDPVehicle #880: [-47.19150006   2.        ]: {MDPVehicle #24: [31.46701975 -2.        ]: 49.7141241032134}, MDPVehicle #424: [ -2.         -34.27726647]: {}, MDPVehicle #24: [31.46701975 -2.        ]: {MDPVehicle #880: [-47.19150006   2.        ]: 29.419137188043994}}
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #768: [ 2.         46.65981136] speed now: 5
+llm action: IDLE
+slight further 1 it is not safety to accelerate, don not accelerate next time
+ New mem has been added ...
+llm_action: [1] MDPVehicle #880: [-47.19150006   2.        ] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #424: [ -2.         -34.27726647] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #24: [31.46701975 -2.        ] speed now: 5
+==========Loaded  E:\YiZhen\Thesis\CoDrivingLLM-ReleasedReproduction\runs\stage1i_intersection_memory_on_20seeds\released-style-intersection-memory-on_20261010T085023016082Z_eed64981\memory-db\intersection-multi-agent-v0  Memory, Now the database has  2328  items.==========
+{MDPVehicle #768: [ 2.         45.55281547]: {}, MDPVehicle #880: [-46.08450418   2.        ]: {MDPVehicle #24: [30.36002387 -2.        ]: 48.62881502193375}, MDPVehicle #424: [ -2.         -33.17027059]: {}, MDPVehicle #24: [30.36002387 -2.        ]: {MDPVehicle #880: [-46.08450418   2.        ]: 28.334211821330335}}
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #768: [ 2.         45.55281547] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #880: [-46.08450418   2.        ] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #424: [ -2.         -33.17027059] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #24: [30.36002387 -2.        ] speed now: 5
+==========Loaded  E:\YiZhen\Thesis\CoDrivingLLM-ReleasedReproduction\runs\stage1i_intersection_memory_on_20seeds\released-style-intersection-memory-on_20261010T085023016082Z_eed64981\memory-db\intersection-multi-agent-v0  Memory, Now the database has  2332  items.==========
+{MDPVehicle #768: [ 2.         44.44581959]: {}, MDPVehicle #880: [-44.97750829   2.        ]: {MDPVehicle #24: [29.25302798 -2.        ]: 47.54450594235895}, MDPVehicle #424: [ -2.         -32.06327471]: {}, MDPVehicle #24: [29.25302798 -2.        ]: {MDPVehicle #880: [-44.97750829   2.        ]: 27.251061740066024}}
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #768: [ 2.         44.44581959] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #880: [-44.97750829   2.        ] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #424: [ -2.         -32.06327471] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #24: [29.25302798 -2.        ] speed now: 5
+==========Loaded  E:\YiZhen\Thesis\CoDrivingLLM-ReleasedReproduction\runs\stage1i_intersection_memory_on_20seeds\released-style-intersection-memory-on_20261010T085023016082Z_eed64981\memory-db\intersection-multi-agent-v0  Memory, Now the database has  2336  items.==========
+{MDPVehicle #768: [ 2.        43.3388237]: {}, MDPVehicle #880: [-43.87051241   2.        ]: {MDPVehicle #24: [28.1460321 -2.       ]: 46.46126687840501}, MDPVehicle #424: [ -2.         -30.95627882]: {}, MDPVehicle #24: [28.1460321 -2.       ]: {MDPVehicle #880: [-43.87051241   2.        ]: 26.16990737781806}}
+llm action: IDLE
+ New mem has been added ...
+llm_action: [1] MDPVehicle #768: [ 2.        43.3388237] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #880: [-43.87051241   2.        ] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #424: [ -2.         -30.95627882] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #24: [28.1460321 -2.       ] speed now: 5
+==========Loaded  E:\YiZhen\Thesis\CoDrivingLLM-ReleasedReproduction\runs\stage1i_intersection_memory_on_20seeds\released-style-intersection-memory-on_20261010T085023016082Z_eed64981\memory-db\intersection-multi-agent-v0  Memory, Now the database has  2340  items.==========
+{MDPVehicle #768: [ 2.         42.23182782]: {}, MDPVehicle #880: [-42.76351652   2.        ]: {MDPVehicle #24: [27.03903621 -2.        ]: 45.37917445665528}, MDPVehicle #424: [ -2.         -29.84928294]: {}, MDPVehicle #24: [27.03903621 -2.        ]: {MDPVehicle #880: [-42.76351652   2.        ]: 25.091006718425508}}
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #768: [ 2.         42.23182782] speed now: 5
+llm action: IDLE
+slight further 1 it is not safety to accelerate, don not accelerate next time
+ New mem has been added ...
+llm_action: [1] MDPVehicle #880: [-42.76351652   2.        ] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #424: [ -2.         -29.84928294] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #24: [27.03903621 -2.        ] speed now: 5
+==========Loaded  E:\YiZhen\Thesis\CoDrivingLLM-ReleasedReproduction\runs\stage1i_intersection_memory_on_20seeds\released-style-intersection-memory-on_20261010T085023016082Z_eed64981\memory-db\intersection-multi-agent-v0  Memory, Now the database has  2344  items.==========
+{MDPVehicle #768: [ 2.         41.12483193]: {}, MDPVehicle #880: [-41.65652064   2.        ]: {MDPVehicle #24: [25.93204033 -2.        ]: 44.29831270563865}, MDPVehicle #424: [ -2.         -28.74228705]: {}, MDPVehicle #24: [25.93204033 -2.        ]: {MDPVehicle #880: [-41.65652064   2.        ]: 24.014663518408565}}
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #768: [ 2.         41.12483193] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #880: [-41.65652064   2.        ] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #424: [ -2.         -28.74228705] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #24: [25.93204033 -2.        ] speed now: 5
+==========Loaded  E:\YiZhen\Thesis\CoDrivingLLM-ReleasedReproduction\runs\stage1i_intersection_memory_on_20seeds\released-style-intersection-memory-on_20261010T085023016082Z_eed64981\memory-db\intersection-multi-agent-v0  Memory, Now the database has  2348  items.==========
+{MDPVehicle #768: [ 2.         40.01783605]: {}, MDPVehicle #880: [-40.54952475   2.        ]: {MDPVehicle #24: [24.82504444 -2.        ]: 43.21877395928013}, MDPVehicle #424: [ -2.         -27.63529117]: {}, MDPVehicle #24: [24.82504444 -2.        ]: {MDPVehicle #880: [-40.54952475   2.        ]: 22.941237748615574}}
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #768: [ 2.         40.01783605] speed now: 5
+llm action: IDLE
+slight further 1 it is not safety to accelerate, don not accelerate next time
+ New mem has been added ...
+llm_action: [1] MDPVehicle #880: [-40.54952475   2.        ] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #424: [ -2.         -27.63529117] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #24: [24.82504444 -2.        ] speed now: 5
+==========Loaded  E:\YiZhen\Thesis\CoDrivingLLM-ReleasedReproduction\runs\stage1i_intersection_memory_on_20seeds\released-style-intersection-memory-on_20261010T085023016082Z_eed64981\memory-db\intersection-multi-agent-v0  Memory, Now the database has  2352  items.==========
+{MDPVehicle #768: [ 2.         38.91084017]: {}, MDPVehicle #880: [-39.44252887   2.        ]: {MDPVehicle #24: [23.71804856 -2.        ]: 42.14065989395474}, MDPVehicle #424: [ -2.         -26.52829528]: {}, MDPVehicle #24: [23.71804856 -2.        ]: {MDPVehicle #880: [-39.44252887   2.        ]: 21.871158971404256}}
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #768: [ 2.         38.91084017] speed now: 5
+llm action: IDLE
+slight further 1 it is not safety to accelerate, don not accelerate next time
+ New mem has been added ...
+llm_action: [1] MDPVehicle #880: [-39.44252887   2.        ] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #424: [ -2.         -26.52829528] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #24: [23.71804856 -2.        ] speed now: 5
+==========Loaded  E:\YiZhen\Thesis\CoDrivingLLM-ReleasedReproduction\runs\stage1i_intersection_memory_on_20seeds\released-style-intersection-memory-on_20261010T085023016082Z_eed64981\memory-db\intersection-multi-agent-v0  Memory, Now the database has  2356  items.==========
+{MDPVehicle #768: [ 2.         37.80384428]: {}, MDPVehicle #880: [-38.33553298   2.        ]: {MDPVehicle #24: [22.61105267 -2.        ]: 41.064082722379084}, MDPVehicle #424: [ -2.        -25.4212994]: {}, MDPVehicle #24: [22.61105267 -2.        ]: {MDPVehicle #880: [-38.33553298   2.        ]: 20.804943639533874}}
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #768: [ 2.         37.80384428] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #880: [-38.33553298   2.        ] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #424: [ -2.        -25.4212994] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #24: [22.61105267 -2.        ] speed now: 5
+==========Loaded  E:\YiZhen\Thesis\CoDrivingLLM-ReleasedReproduction\runs\stage1i_intersection_memory_on_20seeds\released-style-intersection-memory-on_20261010T085023016082Z_eed64981\memory-db\intersection-multi-agent-v0  Memory, Now the database has  2360  items.==========
+{MDPVehicle #768: [ 2.        36.6968484]: {}, MDPVehicle #880: [-37.2285371   2.       ]: {MDPVehicle #24: [21.50405679 -2.        ]: 39.98916657221842}, MDPVehicle #424: [ -2.         -24.31430351]: {}, MDPVehicle #24: [21.50405679 -2.        ]: {MDPVehicle #880: [-37.2285371   2.       ]: 19.74321768896187}}
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #768: [ 2.        36.6968484] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #880: [-37.2285371   2.       ] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #424: [ -2.         -24.31430351] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #24: [21.50405679 -2.        ] speed now: 5
+==========Loaded  E:\YiZhen\Thesis\CoDrivingLLM-ReleasedReproduction\runs\stage1i_intersection_memory_on_20seeds\released-style-intersection-memory-on_20261010T085023016082Z_eed64981\memory-db\intersection-multi-agent-v0  Memory, Now the database has  2364  items.==========
+{MDPVehicle #768: [ 2.         35.58985251]: {}, MDPVehicle #880: [-36.12154121   2.        ]: {MDPVehicle #24: [20.3970609 -2.       ]: 38.91604908297708}, MDPVehicle #424: [ -2.         -23.20730763]: {}, MDPVehicle #24: [20.3970609 -2.       ]: {MDPVehicle #880: [-36.12154121   2.        ]: 18.686746355668888}}
+llm action: IDLE
+ New mem has been added ...
+llm_action: [1] MDPVehicle #768: [ 2.         35.58985251] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #880: [-36.12154121   2.        ] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #424: [ -2.         -23.20730763] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #24: [20.3970609 -2.       ] speed now: 5
+==========Loaded  E:\YiZhen\Thesis\CoDrivingLLM-ReleasedReproduction\runs\stage1i_intersection_memory_on_20seeds\released-style-intersection-memory-on_20261010T085023016082Z_eed64981\memory-db\intersection-multi-agent-v0  Memory, Now the database has  2368  items.==========
+{MDPVehicle #768: [ 2.         34.48285663]: {}, MDPVehicle #880: [-35.01454533   2.        ]: {MDPVehicle #24: [19.29006502 -2.        ]: 37.84488326173756}, MDPVehicle #424: [ -2.         -22.10031174]: {}, MDPVehicle #24: [19.29006502 -2.        ]: {MDPVehicle #880: [-35.01454533   2.        ]: 17.63647396126231}}
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #768: [ 2.         34.48285663] speed now: 5
+llm action: IDLE
+slight further 1 it is not safety to accelerate, don not accelerate next time
+ New mem has been added ...
+llm_action: [1] MDPVehicle #880: [-35.01454533   2.        ] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #424: [ -2.         -22.10031174] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #24: [19.29006502 -2.        ] speed now: 5
+==========Loaded  E:\YiZhen\Thesis\CoDrivingLLM-ReleasedReproduction\runs\stage1i_intersection_memory_on_20seeds\released-style-intersection-memory-on_20261010T085023016082Z_eed64981\memory-db\intersection-multi-agent-v0  Memory, Now the database has  2372  items.==========
+{MDPVehicle #768: [ 2.         33.37586074]: {}, MDPVehicle #880: [-33.90754944   2.        ]: {MDPVehicle #24: [18.18306913 -2.        ]: 36.77583964695051}, MDPVehicle #424: [ -2.         -20.99331586]: {}, MDPVehicle #24: [18.18306913 -2.        ]: {MDPVehicle #880: [-33.90754944   2.        ]: 16.593577612717347}}
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #768: [ 2.         33.37586074] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #880: [-33.90754944   2.        ] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #424: [ -2.         -20.99331586] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #24: [18.18306913 -2.        ] speed now: 5
+==========Loaded  E:\YiZhen\Thesis\CoDrivingLLM-ReleasedReproduction\runs\stage1i_intersection_memory_on_20seeds\released-style-intersection-memory-on_20261010T085023016082Z_eed64981\memory-db\intersection-multi-agent-v0  Memory, Now the database has  2376  items.==========
+{MDPVehicle #768: [ 2.         32.26886486]: {}, MDPVehicle #880: [-32.80055356   2.        ]: {MDPVehicle #24: [17.07607325 -2.        ]: 35.70910884017833}, MDPVehicle #424: [ -2.         -19.88631997]: {}, MDPVehicle #24: [17.07607325 -2.        ]: {MDPVehicle #880: [-32.80055356   2.        ]: 15.559540544954299}}
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #768: [ 2.         32.26886486] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #880: [-32.80055356   2.        ] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #424: [ -2.         -19.88631997] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #24: [17.07607325 -2.        ] speed now: 5
+==========Loaded  E:\YiZhen\Thesis\CoDrivingLLM-ReleasedReproduction\runs\stage1i_intersection_memory_on_20seeds\released-style-intersection-memory-on_20261010T085023016082Z_eed64981\memory-db\intersection-multi-agent-v0  Memory, Now the database has  2380  items.==========
+{MDPVehicle #768: [ 2.         31.16186897]: {}, MDPVehicle #880: [-31.69355768   2.        ]: {MDPVehicle #24: [15.96907736 -2.        ]: 34.64490447899949}, MDPVehicle #424: [ -2.         -18.77932409]: {}, MDPVehicle #24: [15.96907736 -2.        ]: {MDPVehicle #880: [-31.69355768   2.        ]: 14.536253496987824}}
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #768: [ 2.         31.16186897] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #880: [-31.69355768   2.        ] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #424: [ -2.         -18.77932409] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #24: [15.96907736 -2.        ] speed now: 5
+==========Loaded  E:\YiZhen\Thesis\CoDrivingLLM-ReleasedReproduction\runs\stage1i_intersection_memory_on_20seeds\released-style-intersection-memory-on_20261010T085023016082Z_eed64981\memory-db\intersection-multi-agent-v0  Memory, Now the database has  2384  items.==========
+{MDPVehicle #768: [ 2.         30.05487309]: {}, MDPVehicle #880: [-30.58656179   2.        ]: {MDPVehicle #24: [14.86208148 -2.        ]: 33.583466740884695}, MDPVehicle #424: [ -2.        -17.6723282]: {}, MDPVehicle #24: [14.86208148 -2.        ]: {MDPVehicle #880: [-30.58656179   2.        ]: 13.526156485310834}}
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #768: [ 2.         30.05487309] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #880: [-30.58656179   2.        ] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #424: [ -2.        -17.6723282] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #24: [14.86208148 -2.        ] speed now: 5
+==========Loaded  E:\YiZhen\Thesis\CoDrivingLLM-ReleasedReproduction\runs\stage1i_intersection_memory_on_20seeds\released-style-intersection-memory-on_20261010T085023016082Z_eed64981\memory-db\intersection-multi-agent-v0  Memory, Now the database has  2388  items.==========
+{MDPVehicle #768: [ 2.        28.9478772]: {}, MDPVehicle #880: [-29.47956591   2.        ]: {MDPVehicle #24: [13.75508559 -2.        ]: 32.52506648864886}, MDPVehicle #424: [ -2.         -16.56533232]: {}, MDPVehicle #24: [13.75508559 -2.        ]: {MDPVehicle #880: [-29.47956591   2.        ]: 12.532439211077529}}
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #768: [ 2.        28.9478772] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #880: [-29.47956591   2.        ] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #424: [ -2.         -16.56533232] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #24: [13.75508559 -2.        ] speed now: 5
+==========Loaded  E:\YiZhen\Thesis\CoDrivingLLM-ReleasedReproduction\runs\stage1i_intersection_memory_on_20seeds\released-style-intersection-memory-on_20261010T085023016082Z_eed64981\memory-db\intersection-multi-agent-v0  Memory, Now the database has  2392  items.==========
+{MDPVehicle #768: [ 2.         27.84088132]: {}, MDPVehicle #880: [-28.37257002   2.        ]: {MDPVehicle #24: [12.65217457 -1.92198085]: 31.470010194211277}, MDPVehicle #424: [ -2.         -15.45833643]: {}, MDPVehicle #24: [12.65217457 -1.92198085]: {MDPVehicle #880: [-28.37257002   2.        ]: 11.601776863262739}}
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #768: [ 2.         27.84088132] speed now: 5
+llm action: IDLE
+slight further 1 it is not safety to accelerate, don not accelerate next time
+ New mem has been added ...
+llm_action: [1] MDPVehicle #880: [-28.37257002   2.        ] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #424: [ -2.         -15.45833643] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #24: [12.65217457 -1.92198085] speed now: 5
+==========Loaded  E:\YiZhen\Thesis\CoDrivingLLM-ReleasedReproduction\runs\stage1i_intersection_memory_on_20seeds\released-style-intersection-memory-on_20261010T085023016082Z_eed64981\memory-db\intersection-multi-agent-v0  Memory, Now the database has  2396  items.==========
+{MDPVehicle #768: [ 2.         26.73388543]: {}, MDPVehicle #880: [-27.26557414   2.        ]: {MDPVehicle #24: [11.54577879 -1.89801552]: 30.418645810329977}, MDPVehicle #424: [ -2.         -14.35134055]: {}, MDPVehicle #24: [11.54577879 -1.89801552]: {MDPVehicle #880: [-27.26557414   2.        ]: 10.671881299797807}}
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #768: [ 2.         26.73388543] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #880: [-27.26557414   2.        ] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #424: [ -2.         -14.35134055] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #24: [11.54577879 -1.89801552] speed now: 5
+==========Loaded  E:\YiZhen\Thesis\CoDrivingLLM-ReleasedReproduction\runs\stage1i_intersection_memory_on_20seeds\released-style-intersection-memory-on_20261010T085023016082Z_eed64981\memory-db\intersection-multi-agent-v0  Memory, Now the database has  2400  items.==========
+{MDPVehicle #768: [ 2.         25.62688955]: {}, MDPVehicle #880: [-26.15857825   2.        ]: {MDPVehicle #24: [10.44253273 -1.98556155]: 29.37136980160546}, MDPVehicle #424: [ -2.         -13.24434466]: {}, MDPVehicle #24: [10.44253273 -1.98556155]: {MDPVehicle #880: [-26.15857825   2.        ]: 9.71496558994536}}
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #768: [ 2.         25.62688955] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #880: [-26.15857825   2.        ] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #424: [ -2.         -13.24434466] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #24: [10.44253273 -1.98556155] speed now: 5
+==========Loaded  E:\YiZhen\Thesis\CoDrivingLLM-ReleasedReproduction\runs\stage1i_intersection_memory_on_20seeds\released-style-intersection-memory-on_20261010T085023016082Z_eed64981\memory-db\intersection-multi-agent-v0  Memory, Now the database has  2404  items.==========
+{MDPVehicle #768: [ 2.         24.51989366]: {}, MDPVehicle #880: [-25.05158237   2.        ]: {MDPVehicle #24: [ 9.35506046 -2.19120414]: 28.32863559878641}, MDPVehicle #424: [ -1.90970939 -12.14159047]: {}, MDPVehicle #24: [ 9.35506046 -2.19120414]: {MDPVehicle #880: [-25.05158237   2.        ]: 8.729860776475011}}
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #768: [ 2.         24.51989366] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #880: [-25.05158237   2.        ] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #424: [ -1.90970939 -12.14159047] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #24: [ 9.35506046 -2.19120414] speed now: 5
+==========Loaded  E:\YiZhen\Thesis\CoDrivingLLM-ReleasedReproduction\runs\stage1i_intersection_memory_on_20seeds\released-style-intersection-memory-on_20261010T085023016082Z_eed64981\memory-db\intersection-multi-agent-v0  Memory, Now the database has  2408  items.==========
+{MDPVehicle #768: [ 2.         23.41289778]: {}, MDPVehicle #880: [-23.94458648   2.        ]: {MDPVehicle #24: [ 8.29743512 -2.51733037]: 27.290963807326545}, MDPVehicle #424: [ -1.93182737 -11.03515619]: {}, MDPVehicle #24: [ 8.29743512 -2.51733037]: {MDPVehicle #880: [-23.94458648   2.        ]: 7.717283769077674}}
+llm action: IDLE
+ New mem has been added ...
+llm_action: [1] MDPVehicle #768: [ 2.         23.41289778] speed now: 5
+llm action: IDLE
+slight further 1 it is not safety to accelerate, don not accelerate next time
+ New mem has been added ...
+llm_action: [1] MDPVehicle #880: [-23.94458648   2.        ] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #424: [ -1.93182737 -11.03515619] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #24: [ 8.29743512 -2.51733037] speed now: 5
+==========Loaded  E:\YiZhen\Thesis\CoDrivingLLM-ReleasedReproduction\runs\stage1i_intersection_memory_on_20seeds\released-style-intersection-memory-on_20261010T085023016082Z_eed64981\memory-db\intersection-multi-agent-v0  Memory, Now the database has  2412  items.==========
+{MDPVehicle #768: [ 2.         22.30590189]: {}, MDPVehicle #880: [-22.8375906   2.       ]: {MDPVehicle #24: [ 7.28416828 -2.96256842]: 26.25895458609497}, MDPVehicle #424: [-2.07069828 -9.93719204]: {}, MDPVehicle #24: [ 7.28416828 -2.96256842]: {MDPVehicle #880: [-22.8375906   2.       ]: 6.679324873670293}}
+llm action: IDLE
+ New mem has been added ...
+llm_action: [1] MDPVehicle #768: [ 2.         22.30590189] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #880: [-22.8375906   2.       ] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #424: [-2.07069828 -9.93719204] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #24: [ 7.28416828 -2.96256842] speed now: 5
+==========Loaded  E:\YiZhen\Thesis\CoDrivingLLM-ReleasedReproduction\runs\stage1i_intersection_memory_on_20seeds\released-style-intersection-memory-on_20261010T085023016082Z_eed64981\memory-db\intersection-multi-agent-v0  Memory, Now the database has  2416  items.==========
+{MDPVehicle #768: [ 2.         21.19890601]: {}, MDPVehicle #880: [-21.73059471   2.        ]: {MDPVehicle #24: [ 6.32976689 -3.52297805]: 25.233302719901733}, MDPVehicle #424: [-2.3305246  -8.86137684]: {}, MDPVehicle #24: [ 6.32976689 -3.52297805]: {MDPVehicle #880: [-21.73059471   2.        ]: 5.6187676804633755}}
+llm action: IDLE
+ New mem has been added ...
+llm_action: [1] MDPVehicle #768: [ 2.         21.19890601] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #880: [-21.73059471   2.        ] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #424: [-2.3305246  -8.86137684] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #24: [ 6.32976689 -3.52297805] speed now: 5
+==========Loaded  E:\YiZhen\Thesis\CoDrivingLLM-ReleasedReproduction\runs\stage1i_intersection_memory_on_20seeds\released-style-intersection-memory-on_20261010T085023016082Z_eed64981\memory-db\intersection-multi-agent-v0  Memory, Now the database has  2420  items.==========
+{MDPVehicle #768: [ 2.         20.09191012]: {}, MDPVehicle #880: [-20.62359883   2.        ]: {MDPVehicle #24: [ 5.44848316 -4.1925014 ]: 24.21481604579341}, MDPVehicle #424: [-2.71130503 -7.82217662]: {}, MDPVehicle #24: [ 5.44848316 -4.1925014 ]: {MDPVehicle #880: [-20.62359883   2.        ]: 4.538907626970945}}
+llm action: IDLE
+ New mem has been added ...
+llm_action: [1] MDPVehicle #768: [ 2.         20.09191012] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #880: [-20.62359883   2.        ] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #424: [-2.71130503 -7.82217662] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #24: [ 5.44848316 -4.1925014 ] speed now: 5
+==========Loaded  E:\YiZhen\Thesis\CoDrivingLLM-ReleasedReproduction\runs\stage1i_intersection_memory_on_20seeds\released-style-intersection-memory-on_20261010T085023016082Z_eed64981\memory-db\intersection-multi-agent-v0  Memory, Now the database has  2424  items.==========
+{MDPVehicle #768: [ 2.         18.98491424]: {}, MDPVehicle #880: [-19.51660294   2.        ]: {MDPVehicle #24: [ 4.65399451 -4.9630122 ]: 23.20443806444878}, MDPVehicle #424: [-3.21004632 -6.83414903]: {}, MDPVehicle #24: [ 4.65399451 -4.9630122 ]: {MDPVehicle #880: [-19.51660294   2.        ]: 3.4437105521383327}}
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #768: [ 2.         18.98491424] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #880: [-19.51660294   2.        ] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #424: [-3.21004632 -6.83414903] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #24: [ 4.65399451 -4.9630122 ] speed now: 5
+==========Loaded  E:\YiZhen\Thesis\CoDrivingLLM-ReleasedReproduction\runs\stage1i_intersection_memory_on_20seeds\released-style-intersection-memory-on_20261010T085023016082Z_eed64981\memory-db\intersection-multi-agent-v0  Memory, Now the database has  2428  items.==========
+{MDPVehicle #768: [ 2.         17.87791835]: {}, MDPVehicle #880: [-18.40960706   2.        ]: {MDPVehicle #24: [ 3.95902949 -5.82434779]: 22.20327578128679}, MDPVehicle #424: [-3.82162321 -5.91170415]: {}, MDPVehicle #24: [ 3.95902949 -5.82434779]: {MDPVehicle #880: [-18.40960706   2.        ]: 2.338574409324884}}
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #768: [ 2.         17.87791835] speed now: 5
+llm action: IDLE
+slight further 1 it is not safety to accelerate, don not accelerate next time
+ New mem has been added ...
+llm_action: [1] MDPVehicle #880: [-18.40960706   2.        ] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #424: [-3.82162321 -5.91170415] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #24: [ 3.95902949 -5.82434779] speed now: 5
+==========Loaded  E:\YiZhen\Thesis\CoDrivingLLM-ReleasedReproduction\runs\stage1i_intersection_memory_on_20seeds\released-style-intersection-memory-on_20261010T085023016082Z_eed64981\memory-db\intersection-multi-agent-v0  Memory, Now the database has  2432  items.==========
+{MDPVehicle #768: [ 2.         16.77092247]: {}, MDPVehicle #880: [-17.30261117   2.        ]: {MDPVehicle #24: [ 3.37500906 -6.76444018]: 21.21263408279899}, MDPVehicle #424: [-4.53892758 -5.0688609 ]: {}, MDPVehicle #24: [ 3.37500906 -6.76444018]: {MDPVehicle #880: [-17.30261117   2.        ]: 1.235328358434885}}
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #768: [ 2.         16.77092247] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #880: [-17.30261117   2.        ] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #424: [-4.53892758 -5.0688609 ] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #24: [ 3.37500906 -6.76444018] speed now: 5
+==========Loaded  E:\YiZhen\Thesis\CoDrivingLLM-ReleasedReproduction\runs\stage1i_intersection_memory_on_20seeds\released-style-intersection-memory-on_20261010T085023016082Z_eed64981\memory-db\intersection-multi-agent-v0  Memory, Now the database has  2436  items.==========
+{MDPVehicle #768: [ 2.         15.66392658]: {}, MDPVehicle #880: [-16.19561529   2.        ]: {}, MDPVehicle #424: [-5.35283274 -4.31889749]: {}, MDPVehicle #24: [ 2.91173902 -7.76953488]: {}}
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #768: [ 2.         15.66392658] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #880: [-16.19561529   2.        ] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #424: [-5.35283274 -4.31889749] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #24: [ 2.91173902 -7.76953488] speed now: 5
+==========Loaded  E:\YiZhen\Thesis\CoDrivingLLM-ReleasedReproduction\runs\stage1i_intersection_memory_on_20seeds\released-style-intersection-memory-on_20261010T085023016082Z_eed64981\memory-db\intersection-multi-agent-v0  Memory, Now the database has  2440  items.==========
+{MDPVehicle #768: [ 2.        14.5569307]: {}, MDPVehicle #880: [-15.0886194   2.       ]: {}, MDPVehicle #424: [-6.25224294 -3.67397483]: {}, MDPVehicle #24: [ 2.57716175 -8.82446441]: {}}
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #768: [ 2.        14.5569307] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #880: [-15.0886194   2.       ] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #424: [-6.25224294 -3.67397483] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #24: [ 2.57716175 -8.82446441] speed now: 5
+==========Loaded  E:\YiZhen\Thesis\CoDrivingLLM-ReleasedReproduction\runs\stage1i_intersection_memory_on_20seeds\released-style-intersection-memory-on_20261010T085023016082Z_eed64981\memory-db\intersection-multi-agent-v0  Memory, Now the database has  2444  items.==========
+{MDPVehicle #768: [ 2.         13.44993482]: {}, MDPVehicle #880: [-13.98162352   2.        ]: {MDPVehicle #24: [ 2.51100691 -9.92632814]: 19.96761636201046}, MDPVehicle #424: [-7.22425846 -3.14479683]: {}, MDPVehicle #24: [ 2.51100691 -9.92632814]: {MDPVehicle #880: [-13.98162352   2.        ]: 1.1890749905130416}}
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #768: [ 2.         13.44993482] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #880: [-13.98162352   2.        ] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #424: [-7.22425846 -3.14479683] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #24: [ 2.51100691 -9.92632814] speed now: 5
+==========Loaded  E:\YiZhen\Thesis\CoDrivingLLM-ReleasedReproduction\runs\stage1i_intersection_memory_on_20seeds\released-style-intersection-memory-on_20261010T085023016082Z_eed64981\memory-db\intersection-multi-agent-v0  Memory, Now the database has  2448  items.==========
+{MDPVehicle #768: [ 1.90041196 12.34790901]: {}, MDPVehicle #880: [-12.87577464   2.03039481]: {}, MDPVehicle #424: [-8.25441954 -2.74032919]: {}, MDPVehicle #24: [  2.3918521  -11.02689152]: {}}
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #768: [ 1.90041196 12.34790901] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #880: [-12.87577464   2.03039481] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #424: [-8.25441954 -2.74032919] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #24: [  2.3918521  -11.02689152] speed now: 5
+==========Loaded  E:\YiZhen\Thesis\CoDrivingLLM-ReleasedReproduction\runs\stage1i_intersection_memory_on_20seeds\released-style-intersection-memory-on_20261010T085023016082Z_eed64981\memory-db\intersection-multi-agent-v0  Memory, Now the database has  2452  items.==========
+{MDPVehicle #768: [ 1.90794662 11.24124377]: {}, MDPVehicle #880: [-11.7696043   2.0672307]: {}, MDPVehicle #424: [-9.33657449 -2.54130319]: {}, MDPVehicle #24: [  2.29467309 -12.1296036 ]: {}}
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #768: [ 1.90794662 11.24124377] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #880: [-11.7696043   2.0672307] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #424: [-9.33657449 -2.54130319] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #24: [  2.29467309 -12.1296036 ] speed now: 5
+==========Loaded  E:\YiZhen\Thesis\CoDrivingLLM-ReleasedReproduction\runs\stage1i_intersection_memory_on_20seeds\released-style-intersection-memory-on_20261010T085023016082Z_eed64981\memory-db\intersection-multi-agent-v0  Memory, Now the database has  2456  items.==========
+{MDPVehicle #768: [ 2.02842354 10.14109083]: {}, MDPVehicle #880: [-10.66355511   2.02525768]: {}, MDPVehicle #424: [-10.43861036  -2.43903347]: {}, MDPVehicle #24: [  2.22006624 -13.23407456]: {}}
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #768: [ 2.02842354 10.14109083] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #880: [-10.66355511   2.02525768] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #424: [-10.43861036  -2.43903347] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #24: [  2.22006624 -13.23407456] speed now: 5
+==========Loaded  E:\YiZhen\Thesis\CoDrivingLLM-ReleasedReproduction\runs\stage1i_intersection_memory_on_20seeds\released-style-intersection-memory-on_20261010T085023016082Z_eed64981\memory-db\intersection-multi-agent-v0  Memory, Now the database has  2460  items.==========
+{MDPVehicle #768: [2.26769538 9.0605095 ]: {}, MDPVehicle #880: [-9.56360551  1.9016817 ]: {}, MDPVehicle #424: [-11.54067367  -2.33466689]: {}, MDPVehicle #24: [  2.16389182 -14.3396396 ]: {}}
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #768: [2.26769538 9.0605095 ] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #880: [-9.56360551  1.9016817 ] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #424: [-11.54067367  -2.33466689] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #24: [  2.16389182 -14.3396396 ] speed now: 5
+==========Loaded  E:\YiZhen\Thesis\CoDrivingLLM-ReleasedReproduction\runs\stage1i_intersection_memory_on_20seeds\released-style-intersection-memory-on_20261010T085023016082Z_eed64981\memory-db\intersection-multi-agent-v0  Memory, Now the database has  2464  items.==========
+{MDPVehicle #768: [2.62713192 8.01373064]: {}, MDPVehicle #880: [-8.47630774  1.69439044]: {}, MDPVehicle #424: [-12.64451956  -2.25130397]: {}, MDPVehicle #24: [  2.12193162 -15.44583747]: {}}
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #768: [2.62713192 8.01373064] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #880: [-8.47630774  1.69439044] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #424: [-12.64451956  -2.25130397] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #24: [  2.12193162 -15.44583747] speed now: 5
+==========Loaded  E:\YiZhen\Thesis\CoDrivingLLM-ReleasedReproduction\runs\stage1i_intersection_memory_on_20seeds\released-style-intersection-memory-on_20261010T085023016082Z_eed64981\memory-db\intersection-multi-agent-v0  Memory, Now the database has  2468  items.==========
+{MDPVehicle #768: [3.10467955 7.0152834 ]: {}, MDPVehicle #880: [-7.40858574  1.40255788]: {}, MDPVehicle #424: [-13.74967782  -2.18763462]: {}, MDPVehicle #24: [  2.0906946  -16.55239126]: {}}
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #768: [3.10467955 7.0152834 ] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #880: [-7.40858574  1.40255788] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #424: [-13.74967782  -2.18763462] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #24: [  2.0906946  -16.55239126] speed now: 5
+==========Loaded  E:\YiZhen\Thesis\CoDrivingLLM-ReleasedReproduction\runs\stage1i_intersection_memory_on_20seeds\released-style-intersection-memory-on_20261010T085023016082Z_eed64981\memory-db\intersection-multi-agent-v0  Memory, Now the database has  2472  items.==========
+{MDPVehicle #768: [3.69586304 6.07963402]: {}, MDPVehicle #880: [-6.36757379  1.02640387]: {}, MDPVehicle #424: [-14.85563542  -2.13977044]: {}, MDPVehicle #24: [  2.06746949 -17.65914282]: {}}
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #768: [3.69586304 6.07963402] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #880: [-6.36757379  1.02640387] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #424: [-14.85563542  -2.13977044] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #24: [  2.06746949 -17.65914282] speed now: 5
+==========Loaded  E:\YiZhen\Thesis\CoDrivingLLM-ReleasedReproduction\runs\stage1i_intersection_memory_on_20seeds\released-style-intersection-memory-on_20261010T085023016082Z_eed64981\memory-db\intersection-multi-agent-v0  Memory, Now the database has  2476  items.==========
+{MDPVehicle #768: [4.39408952 5.22091597]: {}, MDPVehicle #880: [-5.3605022   0.56705559]: {}, MDPVehicle #424: [-15.96205245  -2.10402657]: {}, MDPVehicle #24: [  2.05020548 -18.76600374]: {}}
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #768: [4.39408952 5.22091597] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #880: [-5.3605022   0.56705559] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #424: [-15.96205245  -2.10402657] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #24: [  2.05020548 -18.76600374] speed now: 5
+==========Loaded  E:\YiZhen\Thesis\CoDrivingLLM-ReleasedReproduction\runs\stage1i_intersection_memory_on_20seeds\released-style-intersection-memory-on_20261010T085023016082Z_eed64981\memory-db\intersection-multi-agent-v0  Memory, Now the database has  2480  items.==========
+{MDPVehicle #768: [5.19068316 4.45258564]: {}, MDPVehicle #880: [-4.39458409  0.02650906]: {}, MDPVehicle #424: [-17.06872742  -2.07740905]: {}, MDPVehicle #24: [  2.03736985 -19.87292503]: {}}
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #768: [5.19068316 4.45258564] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #880: [-4.39458409  0.02650906] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #424: [-17.06872742  -2.07740905] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #24: [  2.03736985 -19.87292503] speed now: 5
+==========Loaded  E:\YiZhen\Thesis\CoDrivingLLM-ReleasedReproduction\runs\stage1i_intersection_memory_on_20seeds\released-style-intersection-memory-on_20261010T085023016082Z_eed64981\memory-db\intersection-multi-agent-v0  Memory, Now the database has  2484  items.==========
+{MDPVehicle #768: [6.07495024 3.78704735]: {}, MDPVehicle #880: [-3.47689981 -0.59239149]: {}, MDPVehicle #424: [-18.17554575  -2.05760827]: {}, MDPVehicle #24: [  2.02782309 -20.97987965]: {}}
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #768: [6.07495024 3.78704735] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #880: [-3.47689981 -0.59239149] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #424: [-18.17554575  -2.05760827] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #24: [  2.02782309 -20.97987965] speed now: 5
+==========Loaded  E:\YiZhen\Thesis\CoDrivingLLM-ReleasedReproduction\runs\stage1i_intersection_memory_on_20seeds\released-style-intersection-memory-on_20261010T085023016082Z_eed64981\memory-db\intersection-multi-agent-v0  Memory, Now the database has  2488  items.==========
+{MDPVehicle #768: [7.03434137 3.23530739]: {}, MDPVehicle #880: [-2.6142883  -1.28598942]: {}, MDPVehicle #424: [-19.28244343  -2.04288145]: {}, MDPVehicle #24: [  2.02071971 -22.08685269]: {}}
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #768: [7.03434137 3.23530739] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #880: [-2.6142883  -1.28598942] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #424: [-19.28244343  -2.04288145] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #24: [  2.02071971 -22.08685269] speed now: 5
+==========Loaded  E:\YiZhen\Thesis\CoDrivingLLM-ReleasedReproduction\runs\stage1i_intersection_memory_on_20seeds\released-style-intersection-memory-on_20261010T085023016082Z_eed64981\memory-db\intersection-multi-agent-v0  Memory, Now the database has  2492  items.==========
+{MDPVehicle #768: [8.05468988 2.80668296]: {}, MDPVehicle #880: [-1.8132515  -2.04986894]: {}, MDPVehicle #424: [-20.38938499  -2.03192656]: {}, MDPVehicle #24: [  2.01543248 -23.19383592]: {}}
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #768: [8.05468988 2.80668296] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #880: [-1.8132515  -2.04986894] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #424: [-20.38938499  -2.03192656] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #24: [  2.01543248 -23.19383592] speed now: 5
+==========Loaded  E:\YiZhen\Thesis\CoDrivingLLM-ReleasedReproduction\runs\stage1i_intersection_memory_on_20seeds\released-style-intersection-memory-on_20261010T085023016082Z_eed64981\memory-db\intersection-multi-agent-v0  Memory, Now the database has  2496  items.==========
+{MDPVehicle #768: [9.13226773 2.59092193]: {}, MDPVehicle #880: [-1.07987332 -2.87891915]: {}, MDPVehicle #424: [-21.49635079  -2.02377513]: {}, MDPVehicle #24: [  2.01149592 -24.30082479]: {}}
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #768: [9.13226773 2.59092193] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #880: [-1.07987332 -2.87891915] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #424: [-21.49635079  -2.02377513] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #24: [  2.01149592 -24.30082479] speed now: 5
+==========Loaded  E:\YiZhen\Thesis\CoDrivingLLM-ReleasedReproduction\runs\stage1i_intersection_memory_on_20seeds\released-style-intersection-memory-on_20261010T085023016082Z_eed64981\memory-db\intersection-multi-agent-v0  Memory, Now the database has  2500  items.==========
+{MDPVehicle #768: [10.23315105  2.47660094]: {}, MDPVehicle #880: [-0.41975174 -3.76740327]: {}, MDPVehicle #424: [-22.60333001  -2.01770786]: {}, MDPVehicle #24: [  2.00856432 -25.40781679]: {}}
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #768: [10.23315105  2.47660094] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #880: [-0.41975174 -3.76740327] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #424: [-22.60333001  -2.01770786] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #24: [  2.00856432 -25.40781679] speed now: 5
+==========Loaded  E:\YiZhen\Thesis\CoDrivingLLM-ReleasedReproduction\runs\stage1i_intersection_memory_on_20seeds\released-style-intersection-memory-on_20261010T085023016082Z_eed64981\memory-db\intersection-multi-agent-v0  Memory, Now the database has  2504  items.==========
+{MDPVehicle #768: [11.33424935  2.36253292]: {}, MDPVehicle #880: [ 0.16205757 -4.70902942]: {}, MDPVehicle #424: [-23.71031666  -2.01319065]: {}, MDPVehicle #24: [  2.00638076 -26.51481051]: {}}
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #768: [11.33424935  2.36253292] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #880: [ 0.16205757 -4.70902942] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #424: [-23.71031666  -2.01319065] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #24: [  2.00638076 -26.51481051] speed now: 5
+==========Loaded  E:\YiZhen\Thesis\CoDrivingLLM-ReleasedReproduction\runs\stage1i_intersection_memory_on_20seeds\released-style-intersection-memory-on_20261010T085023016082Z_eed64981\memory-db\intersection-multi-agent-v0  Memory, Now the database has  2508  items.==========
+{MDPVehicle #768: [12.43751871  2.27189994]: {}, MDPVehicle #880: [ 0.66108814 -5.69702147]: {}, MDPVehicle #424: [-24.81730742  -2.00982672]: {}, MDPVehicle #24: [  2.00475416 -27.6218052 ]: {}}
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #768: [12.43751871  2.27189994] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #880: [ 0.66108814 -5.69702147] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #424: [-24.81730742  -2.00982672] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #24: [  2.00475416 -27.6218052 ] speed now: 5
+==========Loaded  E:\YiZhen\Thesis\CoDrivingLLM-ReleasedReproduction\runs\stage1i_intersection_memory_on_20seeds\released-style-intersection-memory-on_20261010T085023016082Z_eed64981\memory-db\intersection-multi-agent-v0  Memory, Now the database has  2512  items.==========
+{MDPVehicle #768: [13.54235142  2.2028411 ]: {}, MDPVehicle #880: [ 1.0735012  -6.72418924]: {}, MDPVehicle #424: [-25.92430047  -2.00732121]: {}, MDPVehicle #24: [  2.00354234 -28.72880042]: {}}
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #768: [13.54235142  2.2028411 ] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #880: [ 1.0735012  -6.72418924] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #424: [-25.92430047  -2.00732121] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #24: [  2.00354234 -28.72880042] speed now: 5
+==========Loaded  E:\YiZhen\Thesis\CoDrivingLLM-ReleasedReproduction\runs\stage1i_intersection_memory_on_20seeds\released-style-intersection-memory-on_20261010T085023016082Z_eed64981\memory-db\intersection-multi-agent-v0  Memory, Now the database has  2516  items.==========
+{MDPVehicle #768: [14.64812881  2.1509995 ]: {}, MDPVehicle #880: [ 1.39611702 -7.78299795]: {}, MDPVehicle #424: [-27.03129478  -2.00545482]: {}, MDPVehicle #24: [  2.00263948 -29.83579594]: {}}
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #768: [14.64812881  2.1509995 ] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #880: [ 1.39611702 -7.78299795] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #424: [-27.03129478  -2.00545482] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #24: [  2.00263948 -29.83579594] speed now: 5
+==========Loaded  E:\YiZhen\Thesis\CoDrivingLLM-ReleasedReproduction\runs\stage1i_intersection_memory_on_20seeds\released-style-intersection-memory-on_20261010T085023016082Z_eed64981\memory-db\intersection-multi-agent-v0  Memory, Now the database has  2520  items.==========
+{MDPVehicle #768: [15.75444686  2.11232573]: {}, MDPVehicle #880: [ 1.62643954 -8.86563703]: {}, MDPVehicle #424: [-28.13828979  -2.00406437]: {}, MDPVehicle #24: [  2.00196677 -30.94279162]: {}}
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #768: [15.75444686  2.11232573] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #880: [ 1.62643954 -8.86563703] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #424: [-28.13828979  -2.00406437] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #24: [  2.00196677 -30.94279162] speed now: 5
+==========Loaded  E:\YiZhen\Thesis\CoDrivingLLM-ReleasedReproduction\runs\stage1i_intersection_memory_on_20seeds\released-style-intersection-memory-on_20261010T085023016082Z_eed64981\memory-db\intersection-multi-agent-v0  Memory, Now the database has  2524  items.==========
+{MDPVehicle #768: [16.86106762  2.08355028]: {}, MDPVehicle #880: [ 1.6895642  -9.97054722]: {}, MDPVehicle #424: [-29.24528518  -2.00302844]: {}, MDPVehicle #24: [  2.00146553 -32.04978739]: {}}
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #768: [16.86106762  2.08355028] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #880: [ 1.6895642  -9.97054722] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #424: [-29.24528518  -2.00302844] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #24: [  2.00146553 -32.04978739] speed now: 5
+==========Loaded  E:\YiZhen\Thesis\CoDrivingLLM-ReleasedReproduction\runs\stage1i_intersection_memory_on_20seeds\released-style-intersection-memory-on_20261010T085023016082Z_eed64981\memory-db\intersection-multi-agent-v0  Memory, Now the database has  2528  items.==========
+{MDPVehicle #768: [17.96785624  2.06215863]: {}, MDPVehicle #880: [  1.76076817 -11.07524787]: {}, MDPVehicle #424: [-30.3522808   -2.00225659]: {}, MDPVehicle #24: [  2.00109204 -33.15678321]: {}}
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #768: [17.96785624  2.06215863] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #880: [  1.76076817 -11.07524787] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #424: [-30.3522808   -2.00225659] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #24: [  2.00109204 -33.15678321] speed now: 5
+==========Loaded  E:\YiZhen\Thesis\CoDrivingLLM-ReleasedReproduction\runs\stage1i_intersection_memory_on_20seeds\released-style-intersection-memory-on_20261010T085023016082Z_eed64981\memory-db\intersection-multi-agent-v0  Memory, Now the database has  2532  items.==========
+{MDPVehicle #768: [19.07473763  2.04625718]: {}, MDPVehicle #880: [  1.81916411 -12.1807019 ]: {}, MDPVehicle #424: [-31.45927653  -2.00168148]: {}, MDPVehicle #24: [  2.00081374 -34.26377906]: {}}
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #768: [19.07473763  2.04625718] speed now: 5
+llm action: IDLE
+ New mem has been added ...
+llm_action: [1] MDPVehicle #880: [  1.81916411 -12.1807019 ] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #424: [-31.45927653  -2.00168148] speed now: 5
+llm action: IDLE
+ New mem has been added ...
+llm_action: [1] MDPVehicle #24: [  2.00081374 -34.26377906] speed now: 5
+==========Loaded  E:\YiZhen\Thesis\CoDrivingLLM-ReleasedReproduction\runs\stage1i_intersection_memory_on_20seeds\released-style-intersection-memory-on_20261010T085023016082Z_eed64981\memory-db\intersection-multi-agent-v0  Memory, Now the database has  2536  items.==========
+{MDPVehicle #768: [20.18167021  2.03443354]: {}, MDPVehicle #880: [  1.86435092 -13.28677409]: {}, MDPVehicle #424: [-32.56627234  -2.00125295]: {}, MDPVehicle #24: [  2.00060636 -35.37077493]: {}}
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #768: [20.18167021  2.03443354] speed now: 5
+llm action: IDLE
+ New mem has been added ...
+llm_action: [1] MDPVehicle #880: [  1.86435092 -13.28677409] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #424: [-32.56627234  -2.00125295] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #24: [  2.00060636 -35.37077493] speed now: 5
+==========Loaded  E:\YiZhen\Thesis\CoDrivingLLM-ReleasedReproduction\runs\stage1i_intersection_memory_on_20seeds\released-style-intersection-memory-on_20261010T085023016082Z_eed64981\memory-db\intersection-multi-agent-v0  Memory, Now the database has  2540  items.==========
+{MDPVehicle #768: [21.28863108  2.02563854]: {}, MDPVehicle #880: [  1.89860389 -14.39323903]: {}, MDPVehicle #424: [-33.67326817  -2.00093364]: {}, MDPVehicle #24: [  2.00045184 -36.4777708 ]: {}}
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #768: [21.28863108  2.02563854] speed now: 5
+llm action: IDLE
+ New mem has been added ...
+llm_action: [1] MDPVehicle #880: [  1.89860389 -14.39323903] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #424: [-33.67326817  -2.00093364] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #24: [  2.00045184 -36.4777708 ] speed now: 5
+==========Loaded  E:\YiZhen\Thesis\CoDrivingLLM-ReleasedReproduction\runs\stage1i_intersection_memory_on_20seeds\released-style-intersection-memory-on_20261010T085023016082Z_eed64981\memory-db\intersection-multi-agent-v0  Memory, Now the database has  2544  items.==========
+{MDPVehicle #768: [22.39560758  2.01909385]: {}, MDPVehicle #880: [  1.92433621 -15.49993523]: {}, MDPVehicle #424: [-34.78026403  -2.00069571]: {}, MDPVehicle #24: [  2.00033669 -37.58476668]: {}}
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #768: [22.39560758  2.01909385] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #880: [  1.92433621 -15.49993523] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #424: [-34.78026403  -2.00069571] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #24: [  2.00033669 -37.58476668] speed now: 5
+==========Loaded  E:\YiZhen\Thesis\CoDrivingLLM-ReleasedReproduction\runs\stage1i_intersection_memory_on_20seeds\released-style-intersection-memory-on_20261010T085023016082Z_eed64981\memory-db\intersection-multi-agent-v0  Memory, Now the database has  2548  items.==========
+{MDPVehicle #768: [23.50259272  2.01422206]: {}, MDPVehicle #880: [  1.94358483 -16.60676342]: {}, MDPVehicle #424: [-35.8872599   -2.00051842]: {}, MDPVehicle #24: [  2.00025089 -38.69176256]: {}}
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #768: [23.50259272  2.01422206] speed now: 5
+llm action: IDLE
+ New mem has been added ...
+llm_action: [1] MDPVehicle #880: [  1.94358483 -16.60676342] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #424: [-35.8872599   -2.00051842] speed now: 5
+llm action: IDLE
+ New mem has been added ...
+llm_action: [1] MDPVehicle #24: [  2.00025089 -38.69176256] speed now: 5
+==========Loaded  E:\YiZhen\Thesis\CoDrivingLLM-ReleasedReproduction\runs\stage1i_intersection_memory_on_20seeds\released-style-intersection-memory-on_20261010T085023016082Z_eed64981\memory-db\intersection-multi-agent-v0  Memory, Now the database has  2552  items.==========
+{MDPVehicle #768: [24.60958265  2.01059456]: {}, MDPVehicle #880: [  1.9579532  -17.71366586]: {}, MDPVehicle #424: [-36.99425578  -2.0003863 ]: {}, MDPVehicle #24: [  2.00018695 -39.79875844]: {}}
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #768: [24.60958265  2.01059456] speed now: 5
+llm action: IDLE
+ New mem has been added ...
+llm_action: [1] MDPVehicle #880: [  1.9579532  -17.71366586] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #424: [-36.99425578  -2.0003863 ] speed now: 5
+llm action: IDLE
+ New mem has been added ...
+llm_action: [1] MDPVehicle #24: [  2.00018695 -39.79875844] speed now: 5
+==========Loaded  E:\YiZhen\Thesis\CoDrivingLLM-ReleasedReproduction\runs\stage1i_intersection_memory_on_20seeds\released-style-intersection-memory-on_20261010T085023016082Z_eed64981\memory-db\intersection-multi-agent-v0  Memory, Now the database has  2556  items.==========
+{MDPVehicle #768: [25.71657523  2.00789299]: {}, MDPVehicle #880: [  1.96866763 -18.82060978]: {}, MDPVehicle #424: [-38.10125166  -2.00028786]: {}, MDPVehicle #24: [  2.00013931 -40.90575433]: {}}
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #768: [25.71657523  2.00789299] speed now: 5
+llm action: IDLE
+ New mem has been added ...
+llm_action: [1] MDPVehicle #880: [  1.96866763 -18.82060978] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #424: [-38.10125166  -2.00028786] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #24: [  2.00013931 -40.90575433] speed now: 5
+==========Loaded  E:\YiZhen\Thesis\CoDrivingLLM-ReleasedReproduction\runs\stage1i_intersection_memory_on_20seeds\released-style-intersection-memory-on_20261010T085023016082Z_eed64981\memory-db\intersection-multi-agent-v0  Memory, Now the database has  2560  items.==========
+{MDPVehicle #768: [26.82356928  2.00588068]: {}, MDPVehicle #880: [  1.97665341 -19.9275768 ]: {}, MDPVehicle #424: [-39.20824754  -2.0002145 ]: {}, MDPVehicle #24: [  2.00010381 -42.01275021]: {}}
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #768: [26.82356928  2.00588068] speed now: 5
+llm action: IDLE
+ New mem has been added ...
+llm_action: [1] MDPVehicle #880: [  1.97665341 -19.9275768 ] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #424: [-39.20824754  -2.0002145 ] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #24: [  2.00010381 -42.01275021] speed now: 5
+==========Loaded  E:\YiZhen\Thesis\CoDrivingLLM-ReleasedReproduction\runs\stage1i_intersection_memory_on_20seeds\released-style-intersection-memory-on_20261010T085023016082Z_eed64981\memory-db\intersection-multi-agent-v0  Memory, Now the database has  2564  items.==========
+{MDPVehicle #768: [27.93056415  2.00438161]: {}, MDPVehicle #880: [  1.98260418 -21.03455666]: {}, MDPVehicle #424: [-40.31524343  -2.00015984]: {}, MDPVehicle #24: [  2.00007736 -43.11974609]: {}}
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #768: [27.93056415  2.00438161] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #880: [  1.98260418 -21.03455666] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #424: [-40.31524343  -2.00015984] speed now: 5
+llm action: IDLE
+ New mem has been added ...
+llm_action: [1] MDPVehicle #24: [  2.00007736 -43.11974609] speed now: 5
+==========Loaded  E:\YiZhen\Thesis\CoDrivingLLM-ReleasedReproduction\runs\stage1i_intersection_memory_on_20seeds\released-style-intersection-memory-on_20261010T085023016082Z_eed64981\memory-db\intersection-multi-agent-v0  Memory, Now the database has  2568  items.==========
+{MDPVehicle #768: [29.03755947  2.00326478]: {}, MDPVehicle #880: [  1.98703813 -22.14154364]: {}, MDPVehicle #424: [-41.42223931  -2.00011911]: {}, MDPVehicle #24: [  2.00005764 -44.22674198]: {}}
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #768: [29.03755947  2.00326478] speed now: 5
+llm action: IDLE
+ New mem has been added ...
+llm_action: [1] MDPVehicle #880: [  1.98703813 -22.14154364] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #424: [-41.42223931  -2.00011911] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #24: [  2.00005764 -44.22674198] speed now: 5
+==========Loaded  E:\YiZhen\Thesis\CoDrivingLLM-ReleasedReproduction\runs\stage1i_intersection_memory_on_20seeds\released-style-intersection-memory-on_20261010T085023016082Z_eed64981\memory-db\intersection-multi-agent-v0  Memory, Now the database has  2572  items.==========
+{MDPVehicle #768: [30.14455504  2.00243267]: {}, MDPVehicle #880: [  1.99034183 -23.24853459]: {}, MDPVehicle #424: [-42.5292352   -2.00008875]: {}, MDPVehicle #24: [  2.00004295 -45.33373786]: {}}
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #768: [30.14455504  2.00243267] speed now: 5
+llm action: IDLE
+ New mem has been added ...
+llm_action: [1] MDPVehicle #880: [  1.99034183 -23.24853459] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #424: [-42.5292352   -2.00008875] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #24: [  2.00004295 -45.33373786] speed now: 5
+==========Loaded  E:\YiZhen\Thesis\CoDrivingLLM-ReleasedReproduction\runs\stage1i_intersection_memory_on_20seeds\released-style-intersection-memory-on_20261010T085023016082Z_eed64981\memory-db\intersection-multi-agent-v0  Memory, Now the database has  2576  items.==========
+{MDPVehicle #768: [31.25155075  2.00181268]: {}, MDPVehicle #880: [  1.9928034  -24.35552773]: {}, MDPVehicle #424: [-43.63623108  -2.00006614]: {}, MDPVehicle #24: [  2.00003201 -46.44073375]: {}}
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #768: [31.25155075  2.00181268] speed now: 5
+llm action: IDLE
+ New mem has been added ...
+llm_action: [1] MDPVehicle #880: [  1.9928034  -24.35552773] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #424: [-43.63623108  -2.00006614] speed now: 5
+llm action: IDLE
+ New mem has been added ...
+llm_action: [1] MDPVehicle #24: [  2.00003201 -46.44073375] speed now: 5
+==========Loaded  E:\YiZhen\Thesis\CoDrivingLLM-ReleasedReproduction\runs\stage1i_intersection_memory_on_20seeds\released-style-intersection-memory-on_20261010T085023016082Z_eed64981\memory-db\intersection-multi-agent-v0  Memory, Now the database has  2580  items.==========
+{MDPVehicle #768: [32.35854654  2.00135071]: {}, MDPVehicle #880: [  1.99463753 -25.46252209]: {}, MDPVehicle #424: [-44.74322697  -2.00004928]: {}, MDPVehicle #24: [  2.00002385 -47.54772963]: {}}
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #768: [32.35854654  2.00135071] speed now: 5
+llm action: IDLE
+ New mem has been added ...
+llm_action: [1] MDPVehicle #880: [  1.99463753 -25.46252209] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #424: [-44.74322697  -2.00004928] speed now: 5
+llm action: FASTER
+ New mem has been added ...
+llm_action: [3] MDPVehicle #24: [  2.00002385 -47.54772963] speed now: 5

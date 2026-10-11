@@ -1,0 +1,33 @@
+{
+  "scenario": "intersection-multi-agent-v0",
+  "seed": 8,
+  "memory_mode": "on",
+  "memory": {
+    "database_path": "E:\\YiZhen\\Thesis\\CoDrivingLLM-ReleasedReproduction\\runs\\stage1i_intersection_memory_on_20seeds\\released-style-intersection-memory-on_20261010T085023016082Z_eed64981\\memory-db\\intersection-multi-agent-v0",
+    "embedding_backend": "ollama",
+    "embedding_model": "nomic-embed-text:latest",
+    "embedding_endpoint": "http://127.0.0.1:11435",
+    "embedding_timeout_seconds": 120.0,
+    "lifecycle": "persistent released-style scenario database"
+  },
+  "backend": "ollama",
+  "model": "qwen2.5:7b",
+  "ollama_endpoint": "http://127.0.0.1:11435",
+  "timeout_seconds": 120.0,
+  "max_steps_guard": 300,
+  "start_time_utc": "2026-10-10T09:31:46.646365+00:00",
+  "end_time_utc": "2026-10-10T09:37:00.139963+00:00",
+  "python_version": "3.8.20",
+  "packages": {
+    "gym": "0.15.3",
+    "numpy": "1.24.4",
+    "pandas": "1.3.5",
+    "highway_env": "repository-local; package version unavailable"
+  },
+  "execution_status": "environment_terminated",
+  "git_commit": "c05cbffd07c26800654ad57b1d6d40155652fdb0",
+  "branch": "codex/released-reproduction",
+  "environment_cleanup": {
+    "status": "closed"
+  }
+}
